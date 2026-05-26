@@ -1,5 +1,8 @@
 {
   "type": "module",
+  "bin": {
+    "dbdoc": "./dbdoc.js"
+  },
   "name": "seedfileproject",
   "version": "1.0.0",
   "main": "index.js",
