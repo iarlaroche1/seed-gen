@@ -1,0 +1,4 @@
+{
+  "yearCalculations": "Caches annual mileage calculation totals per carer and client for a specific log date, used in yearly travel reporting. Related to carer.",
+  "zone": "Defines named geographic zones with contact details per company/location, used for carer area assignment. Referenced by carerLocation."
+}

@@ -80,21 +80,27 @@ export async function buildVectorStore(tables) {
 
 /**
  * Searches the vector store for tables most relevant to a query string.
- * Converts the query to a vector and finds the closest matches.
+ * Combines vector similarity with keyword matching for better results.
  * @param {string} query - Natural language query e.g. ticket description
  * @param {number} topK - Number of results to return (default 10)
- * @returns {Promise<Array<{name: string, sql: string, score: number}>>} Top matching tables
+ * @returns {Promise<Array<{name: string, sql: string, score: number}>>}
  */
 export async function searchVectorStore(query, topK = 10) {
   const store = JSON.parse(readFileSync(STORE_PATH, 'utf8'));
   const queryVector = await embed(query);
 
   return store
-    .map(entry => ({
-      name: entry.name,
-      sql: entry.sql,
-      score: cosineSimilarity(queryVector, entry.vector)
-    }))
+    .map(entry => {
+      const vecScore = cosineSimilarity(queryVector, entry.vector);
+      const kwScore = keywordScore(query, entry.name, entry.sql);
+      const combined = (vecScore * 0.6) + (kwScore * 0.4);
+
+      return {
+        name: entry.name,
+        sql: entry.sql,
+        score: combined
+      };
+    })
     .sort((a, b) => b.score - a.score)
     .slice(0, topK);
 }
@@ -106,4 +112,39 @@ export async function searchVectorStore(query, topK = 10) {
  */
 export function vectorStoreExists() {
   return existsSync(STORE_PATH);
+}
+
+/**
+ * Scores a table based on keyword matches between the query and
+ * the table name and column names. Splits camelCase names into
+ * individual words before matching.
+ * Complements vector search by catching domain-specific abbreviations
+ * like 'recurr' that the embedding model won't recognise.
+ * @param {string} query - The search query
+ * @param {string} tableName - The table name
+ * @param {string} tableSql - The full CREATE TABLE SQL
+ * @returns {number} A score between 0 and 1
+ */
+function keywordScore(query, tableName, tableSql) {
+  // split camelCase into individual words
+  const splitCamel = str => str
+    .replace(/([a-z])([A-Z])/g, '$1 $2')
+    .toLowerCase()
+    .split(/\s+/);
+
+  const queryWords = splitCamel(query);
+
+  // extract all column names from the SQL
+  const columnMatches = tableSql.match(/`(\w+)`/g) || [];
+  const columnWords = columnMatches.flatMap(c => splitCamel(c.replace(/`/g, '')));
+
+  // combine table name words and column words
+  const tableWords = [...splitCamel(tableName), ...columnWords];
+
+  // count how many query words appear in the table words
+  const matches = queryWords.filter(word => 
+    word.length > 2 && tableWords.includes(word)
+  );
+
+  return matches.length / queryWords.length;
 }
