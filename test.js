@@ -1,4 +1,14 @@
-import { getTicket } from './jira.js';
+import { getTicket } from './src/ticket/jiraClient.js';
+import { parseTicket } from './src/ticket/ticketParser.js';
+import { createTicket } from './src/ticket/ticket.js';
 
-const ticket = await getTicket('OTB-601');
-console.log(JSON.stringify(ticket, null, 2));
+// Fetch raw data from Jira
+const raw = await getTicket('OTB-601');
+
+// Translate raw Jira JSON into a clean ticket object
+const parsed = parseTicket(raw);
+
+// Create the domain object
+const ticket = createTicket(parsed);
+
+console.log(ticket);
