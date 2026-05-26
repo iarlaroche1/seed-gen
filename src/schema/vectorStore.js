@@ -1,33 +1,44 @@
 /**
  * @module vectorStore
  * @description Handles embedding and similarity search for table schemas.
- * Converts table definitions into vectors using OpenAI's embedding model,
+ * Converts table definitions into vectors using a local Hugging Face model,
  * stores them locally as JSON, and searches them by similarity to a query.
  * 
- * This is the infrastructure layer for schema selection — the only file
- * that knows about OpenAI or the vector storage format.
+ * Currently uses Xenova/all-MiniLM-L6-v2 running locally — no API calls needed.
  * To swap to Anthropic embeddings when API access is available, only the
  * embed() function needs to change — nothing else in the system is affected.
  * To scale to a proper vector DB later, only this file needs to change.
  */
 import { writeFileSync, readFileSync, existsSync } from 'fs';
-import OpenAI from 'openai';
+import { pipeline } from '@xenova/transformers';
 import 'dotenv/config';
 
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
 const STORE_PATH = './data/vectors.json';
 
+let embedder = null;
+
 /**
- * Converts a string of text into a vector using OpenAI's embedding model.
+ * Lazily loads the local embedding model on first use.
+ * Downloads the model files on first run (~25mb), then caches them locally.
+ * @returns {Promise<Function>} The embedding pipeline
+ */
+async function getEmbedder() {
+  if (!embedder) {
+    console.log('Loading embedding model (downloads on first run)...');
+    embedder = await pipeline('feature-extraction', 'Xenova/all-MiniLM-L6-v2');
+  }
+  return embedder;
+}
+
+/**
+ * Converts a string of text into a vector using a local embedding model.
  * @param {string} text - The text to embed
  * @returns {Promise<number[]>} A vector of numbers representing the text
  */
 async function embed(text) {
-  const response = await openai.embeddings.create({
-    model: 'text-embedding-3-small',
-    input: text
-  });
-  return response.data[0].embedding;
+  const embedder = await getEmbedder();
+  const output = await embedder(text, { pooling: 'mean', normalize: true });
+  return Array.from(output.data);
 }
 
 /**
