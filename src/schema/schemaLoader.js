@@ -1,15 +1,18 @@
 /**
  * @module schemaLoader
- * @description Reads cm_fresh.sql and splits it into individual 
- * table definitions. Each table definition is a self-contained 
+ * @description Reads cm_fresh.sql and splits it into individual
+ * table definitions. Each table definition is a self contained
  * CREATE TABLE statement that can be embedded and searched.
+ * 
+ * NOTE: This uses a static file which can go stale if the schema changes.
+ * Future improvement: replace with live DB introspection via information_schema
+ * once direct DB access is available from local machine.
  */
 import { readFileSync } from 'fs';
 
 /**
  * Reads the schema SQL file and extracts individual table definitions.
- * Ignores everything that isn't a CREATE TABLE statement —
- * SET commands, functions, DROP statements etc.
+ * Ignores everything that isn't a CREATE TABLE statement.
  * @param {string} filePath - Path to the SQL schema file
  * @returns {Array<{name: string, sql: string}>} Array of table objects
  */

@@ -1,7 +1,5 @@
-import { searchVectorStore } from './src/schema/vectorStore.js';
+import { loadSchema } from './src/schema/schemaLoader.js';
 
-const results = await searchVectorStore('carer cannot see their schedule', 10);
-
-results.forEach(r => {
-  console.log(`${r.score.toFixed(3)} — ${r.name}`);
-});
+const tables = await loadSchema();
+console.log(`Loaded ${tables.length} tables`);
+console.log('Sample:', tables[0]);
