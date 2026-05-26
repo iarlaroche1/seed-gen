@@ -58,19 +58,26 @@ function cosineSimilarity(a, b) {
 
 /**
  * Builds the vector store from an array of table objects.
- * Embeds each table definition and saves the results to a JSON file.
- * Only needs to be run once, or when the schema changes.
+ * Embeds each table's description (from tableDescriptions.json) if available,
+ * falling back to the raw SQL. Descriptions embed much better than raw SQL
+ * because they use natural language the embedding model understands.
+ * Only needs to be run once, or when the schema or descriptions change.
  * @param {Array<{name: string, sql: string}>} tables - Array of table objects from schemaLoader
  * @returns {Promise<void>}
  */
 export async function buildVectorStore(tables) {
+  const descriptions = JSON.parse(readFileSync('./data/tableDescriptions.json', 'utf8'));
+
   console.log(`Embedding ${tables.length} tables — this may take a minute...`);
   const store = [];
 
   for (let i = 0; i < tables.length; i++) {
     const table = tables[i];
     process.stdout.write(`\r${i + 1}/${tables.length} — ${table.name}`);
-    const vector = await embed(table.sql);
+    const textToEmbed = descriptions[table.name] 
+      ? `Table: ${table.name}. ${descriptions[table.name]}`
+      : table.sql;
+    const vector = await embed(textToEmbed);
     store.push({ name: table.name, sql: table.sql, vector });
   }
 
