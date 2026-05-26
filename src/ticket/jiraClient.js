@@ -15,7 +15,7 @@
  *   JIRA_BASE_URL  - e.g. https://onetouchgroup.atlassian.net
  */
 import 'dotenv/config';
-
+// get credentials from.env
 const token = process.env.JIRA_TOKEN;
 const email = process.env.JIRA_EMAIL;
 const baseUrl = process.env.JIRA_BASE_URL;
