@@ -36,13 +36,33 @@ function extractField(text, label) {
 }
 
 /**
+ * Strips metadata fields and boilerplate from a problem description string,
+ * leaving only the human-written content before the structured section begins.
+ * @param {string} text
+ * @returns {string}
+ */
+function cleanDescription(text) {
+  // Truncate at the first metadata label — everything after is structured fields,
+  // not human prose, and pollutes the vector embedding.
+  const CUTOFF_RE = /Company DB Number|Server \(|Location ID|Steps to Replicate|URLs:|Screenshots|Governance ID/i;
+  const cutoff = text.search(CUTOFF_RE);
+  const prose = cutoff !== -1 ? text.slice(0, cutoff) : text;
+
+  return prose
+    .replace(/Problem Statement\s*\(Please include[^)]*\)\s*:?/gi, '')
+    .replace(/PDF attached to Jira Task/gi, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+/**
  * Extracts just the problem description — the text before the structured fields begin.
  * @param {string} text - Full plain text description
  * @returns {string} Just the human-written problem description
  */
 function extractProblemStatement(text) {
   const match = text.match(/Problem Statement\s*:\s*([\s\S]*?)(?=Expected Behaviour|$)/i);
-  return match ? match[1].trim() : text.trim();
+  return cleanDescription(match ? match[1] : text);
 }
 
 /**

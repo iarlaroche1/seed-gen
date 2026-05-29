@@ -19,11 +19,16 @@ const PORT = process.env.PORT || 3001;
 // Loaded at startup so every request doesn't hit disk.
 // descriptions is a flat { tableName: string } map from tableDescriptions.json.
 // fkGraph is the precomputed dependency graph written by fkExtractor.js.
+// glossary maps business/ticket language to table names, bridging the gap
+// between how developers describe bugs and how the schema is named.
 const descriptions = JSON.parse(
   readFileSync(resolve(__dirname, '../data/tableDescriptions.json'), 'utf8')
 );
 const fkGraph = JSON.parse(
   readFileSync(resolve(__dirname, '../data/fkGraph.json'), 'utf8')
+);
+const glossary = JSON.parse(
+  readFileSync(resolve(__dirname, '../data/domainGlossary.json'), 'utf8')
 );
 
 // Matches Jira-style keys like OTR-123 or PROJ-4567.
@@ -65,6 +70,19 @@ app.post('/api/search', async (req, res) => {
         .slice(0, 300);
       console.log('search query:', searchQuery);
     }
+
+    // Enrich the query with table names from the domain glossary.
+    // Ticket language ("governance", "rota") rarely matches schema names directly;
+    // appending the mapped table names gives the vector store concrete anchors.
+    const lowerQuery = searchQuery.toLowerCase();
+    const glossaryHits = Object.entries(glossary)
+      .filter(([term]) => lowerQuery.includes(term))
+      .flatMap(([, tables]) => tables);
+
+    if (glossaryHits.length > 0) {
+      searchQuery = `${searchQuery} ${[...new Set(glossaryHits)].join(' ')}`.trim().slice(0, 400);
+    }
+    console.log('enriched query:', searchQuery);
 
     // vectors.json is gitignored and must be built locally before searching.
     if (!vectorStoreExists()) {

@@ -1,0 +1,606 @@
+{
+  "words": [
+    {
+      "word": "carer",
+      "count": 98
+    },
+    {
+      "word": "client",
+      "count": 74
+    },
+    {
+      "word": "error",
+      "count": 66
+    },
+    {
+      "word": "actual",
+      "count": 62
+    },
+    {
+      "word": "column",
+      "count": 60
+    },
+    {
+      "word": "report",
+      "count": 46
+    },
+    {
+      "word": "showing",
+      "count": 44
+    },
+    {
+      "word": "care",
+      "count": 40
+    },
+    {
+      "word": "php",
+      "count": 40
+    },
+    {
+      "word": "medication",
+      "count": 40
+    },
+    {
+      "word": "app",
+      "count": 38
+    },
+    {
+      "word": "schedule",
+      "count": 38
+    },
+    {
+      "word": "file",
+      "count": 36
+    },
+    {
+      "word": "data",
+      "count": 32
+    },
+    {
+      "word": "status",
+      "count": 32
+    },
+    {
+      "word": "onetouchhealth",
+      "count": 32
+    },
+    {
+      "word": "call",
+      "count": 32
+    },
+    {
+      "word": "string",
+      "count": 32
+    },
+    {
+      "word": "issue",
+      "count": 30
+    },
+    {
+      "word": "click",
+      "count": 28
+    },
+    {
+      "word": "net",
+      "count": 28
+    },
+    {
+      "word": "calls",
+      "count": 28
+    },
+    {
+      "word": "archived",
+      "count": 28
+    },
+    {
+      "word": "mpdf",
+      "count": 28
+    },
+    {
+      "word": "customer",
+      "count": 26
+    },
+    {
+      "word": "expenses",
+      "count": 26
+    },
+    {
+      "word": "amount",
+      "count": 26
+    },
+    {
+      "word": "time",
+      "count": 26
+    },
+    {
+      "word": "carers",
+      "count": 26
+    },
+    {
+      "word": "files",
+      "count": 26
+    },
+    {
+      "word": "reported",
+      "count": 24
+    },
+    {
+      "word": "comma",
+      "count": 24
+    },
+    {
+      "word": "2026",
+      "count": 22
+    },
+    {
+      "word": "without",
+      "count": 22
+    },
+    {
+      "word": "appear",
+      "count": 22
+    },
+    {
+      "word": "email",
+      "count": 22
+    },
+    {
+      "word": "via",
+      "count": 22
+    },
+    {
+      "word": "where",
+      "count": 22
+    },
+    {
+      "word": "delete",
+      "count": 22
+    },
+    {
+      "word": "timesheets",
+      "count": 22
+    },
+    {
+      "word": "area",
+      "count": 22
+    },
+    {
+      "word": "clock",
+      "count": 22
+    },
+    {
+      "word": "confirm",
+      "count": 20
+    },
+    {
+      "word": "table",
+      "count": 20
+    },
+    {
+      "word": "demo",
+      "count": 20
+    },
+    {
+      "word": "change",
+      "count": 20
+    },
+    {
+      "word": "user",
+      "count": 20
+    },
+    {
+      "word": "sso",
+      "count": 20
+    },
+    {
+      "word": "emar",
+      "count": 20
+    },
+    {
+      "word": "admin",
+      "count": 20
+    },
+    {
+      "word": "timesheet",
+      "count": 20
+    },
+    {
+      "word": "500",
+      "count": 18
+    },
+    {
+      "word": "expense",
+      "count": 18
+    },
+    {
+      "word": "type",
+      "count": 18
+    },
+    {
+      "word": "update",
+      "count": 18
+    },
+    {
+      "word": "settings",
+      "count": 18
+    },
+    {
+      "word": "message",
+      "count": 18
+    },
+    {
+      "word": "scheduled",
+      "count": 18
+    },
+    {
+      "word": "login",
+      "count": 18
+    },
+    {
+      "word": "recurring",
+      "count": 18
+    },
+    {
+      "word": "see",
+      "count": 18
+    },
+    {
+      "word": "due",
+      "count": 18
+    },
+    {
+      "word": "assigned",
+      "count": 18
+    },
+    {
+      "word": "new",
+      "count": 18
+    },
+    {
+      "word": "visible",
+      "count": 18
+    },
+    {
+      "word": "stopped",
+      "count": 18
+    },
+    {
+      "word": "pay",
+      "count": 16
+    },
+    {
+      "word": "unable",
+      "count": 16
+    },
+    {
+      "word": "dashboard",
+      "count": 16
+    },
+    {
+      "word": "profile",
+      "count": 16
+    },
+    {
+      "word": "show",
+      "count": 16
+    },
+    {
+      "word": "below",
+      "count": 16
+    },
+    {
+      "word": "request",
+      "count": 16
+    },
+    {
+      "word": "pages",
+      "count": 16
+    },
+    {
+      "word": "lag",
+      "count": 16
+    },
+    {
+      "word": "missing",
+      "count": 16
+    },
+    {
+      "word": "hours",
+      "count": 16
+    },
+    {
+      "word": "filter",
+      "count": 16
+    },
+    {
+      "word": "sms",
+      "count": 16
+    },
+    {
+      "word": "extras",
+      "count": 16
+    },
+    {
+      "word": "one",
+      "count": 14
+    },
+    {
+      "word": "payroll",
+      "count": 14
+    },
+    {
+      "word": "range",
+      "count": 14
+    },
+    {
+      "word": "input",
+      "count": 14
+    },
+    {
+      "word": "save",
+      "count": 14
+    },
+    {
+      "word": "onetouch",
+      "count": 14
+    },
+    {
+      "word": "button",
+      "count": 14
+    },
+    {
+      "word": "events",
+      "count": 14
+    },
+    {
+      "word": "given",
+      "count": 14
+    },
+    {
+      "word": "print",
+      "count": 14
+    },
+    {
+      "word": "section",
+      "count": 14
+    },
+    {
+      "word": "null",
+      "count": 14
+    },
+    {
+      "word": "end",
+      "count": 14
+    },
+    {
+      "word": "field",
+      "count": 14
+    },
+    {
+      "word": "loading",
+      "count": 14
+    },
+    {
+      "word": "main",
+      "count": 14
+    },
+    {
+      "word": "list",
+      "count": 14
+    },
+    {
+      "word": "script",
+      "count": 14
+    },
+    {
+      "word": "first",
+      "count": 14
+    },
+    {
+      "word": "address",
+      "count": 14
+    }
+  ],
+  "bigrams": [
+    {
+      "phrase": "onetouchhealth net",
+      "count": 28
+    },
+    {
+      "phrase": "extras column",
+      "count": 16
+    },
+    {
+      "phrase": "status change",
+      "count": 14
+    },
+    {
+      "phrase": "stopped medication",
+      "count": 12
+    },
+    {
+      "phrase": "carer app",
+      "count": 10
+    },
+    {
+      "phrase": "amount given",
+      "count": 10
+    },
+    {
+      "phrase": "call client",
+      "count": 10
+    },
+    {
+      "phrase": "error message",
+      "count": 10
+    },
+    {
+      "phrase": "schedule difference",
+      "count": 10
+    },
+    {
+      "phrase": "clock times",
+      "count": 10
+    },
+    {
+      "phrase": "trailing comma",
+      "count": 10
+    },
+    {
+      "phrase": "jobtypelist column",
+      "count": 10
+    },
+    {
+      "phrase": "compjobtype aus",
+      "count": 10
+    },
+    {
+      "phrase": "emar audit",
+      "count": 10
+    },
+    {
+      "phrase": "column visible",
+      "count": 10
+    },
+    {
+      "phrase": "time confirm",
+      "count": 10
+    },
+    {
+      "phrase": "carer pay",
+      "count": 8
+    },
+    {
+      "phrase": "job type",
+      "count": 8
+    },
+    {
+      "phrase": "500 error",
+      "count": 8
+    },
+    {
+      "phrase": "connect onetouch",
+      "count": 8
+    },
+    {
+      "phrase": "future status",
+      "count": 8
+    },
+    {
+      "phrase": "client profile",
+      "count": 8
+    },
+    {
+      "phrase": "error 500",
+      "count": 8
+    },
+    {
+      "phrase": "call assigned",
+      "count": 8
+    },
+    {
+      "phrase": "care notes",
+      "count": 8
+    },
+    {
+      "phrase": "request hours",
+      "count": 8
+    },
+    {
+      "phrase": "via api",
+      "count": 8
+    },
+    {
+      "phrase": "address input",
+      "count": 8
+    },
+    {
+      "phrase": "input field",
+      "count": 8
+    },
+    {
+      "phrase": "delete timesheet",
+      "count": 8
+    },
+    {
+      "phrase": "difference report",
+      "count": 8
+    },
+    {
+      "phrase": "clock time",
+      "count": 8
+    },
+    {
+      "phrase": "mpdf mpdf",
+      "count": 8
+    },
+    {
+      "phrase": "without comma",
+      "count": 8
+    },
+    {
+      "phrase": "comma introduced",
+      "count": 8
+    },
+    {
+      "phrase": "introduced end",
+      "count": 8
+    },
+    {
+      "phrase": "end string",
+      "count": 8
+    },
+    {
+      "phrase": "file export",
+      "count": 8
+    },
+    {
+      "phrase": "export missing",
+      "count": 8
+    },
+    {
+      "phrase": "missing data",
+      "count": 8
+    },
+    {
+      "phrase": "main dashboard",
+      "count": 8
+    },
+    {
+      "phrase": "recurring expenses",
+      "count": 8
+    },
+    {
+      "phrase": "confirmed 2026",
+      "count": 6
+    },
+    {
+      "phrase": "2026 client",
+      "count": 6
+    },
+    {
+      "phrase": "amount showing",
+      "count": 6
+    },
+    {
+      "phrase": "ajay changed",
+      "count": 6
+    },
+    {
+      "phrase": "changed amount",
+      "count": 6
+    },
+    {
+      "phrase": "showing carer",
+      "count": 6
+    },
+    {
+      "phrase": "customer receives",
+      "count": 6
+    },
+    {
+      "phrase": "scheduled status",
+      "count": 6
+    }
+  ]
+}

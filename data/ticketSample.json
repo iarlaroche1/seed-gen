@@ -1,0 +1,502 @@
+[
+  {
+    "id": "OTD-424",
+    "summary": "Re: [One Touch Health] Re: Fw: Jodie Reed wages error",
+    "problemStatement": "Problem Statement : The expense type Customer Travel Mileage - Use when taking customer out has a 30% pay attached to it. For carer Jodie Reed, her expenses are manually adjusted to pay 40% of the expense. This has been manually updated in Confirm Expenses v2. The expenses still reflect the 30% value in the payroll summary. This is the case in both the preview and the locked down payroll. The date range is 24/04 - 23/05 A few examples: One that was confirmed 06-05-2026 12:56, for the client Bluebird Care Market Harborough And Oadby, the amount was 6.2. At 30 %, that should be 1.86, which is what is showing in payroll. Ajay has changed the amount to 2.48 in confirm expensesOne that was confirmed 14-05-2026 16:06, for client Iris Terry, the amount is 15.5. At 30%, that would be 4.65, which is showing on Carer Pay v2. Ajay changed the amount to 6.2.One that was confirmed 14-05-2026 16:06, for client Iris Terry, the amount is 18.9. 30% = 5.67. Ajay has changed the amount to 7.56 It's happening for all of Jodie's expenses. Expected Behaviour : When you update the expense amount to pay, this should pull through to payroll Actual Behaviour : The old, unedited amount is showing in payroll. The correct values are showing on the cmExpenses Table"
+  },
+  {
+    "id": "OTD-423",
+    "summary": "Unable to add Job Type Groups by location",
+    "problemStatement": "Moved from OTR-851 (Care & Compliance) to OTD (Commercial & Operational) board.Replicated on care2-staging. Identified during staging tests.Go to Dashboard → open Location Settings for a location (e.g. Demo) → click Settings in left-hand sidemenu → click ‘Job Type Set Up’ → click Add → provide input and save → confirm you are taken to a 500 error pageJam –"
+  },
+  {
+    "id": "OTB-714",
+    "summary": "Unable to connect to OneTouch Power BI Gateway VPN",
+    "problemStatement": "Problem Statement : Customer cannot connect to the OneTouch VPN Gateway. Expected Behaviour : Customer can connect to the VPN Gateway without issue. Actual Behaviour : When trying to connect to the Onetouch Health HFH HealthCare Data Gateway, the customer receives the following message: Can't connect to OneTouch Health HFH HealthCare Data Gateway IKE authentication credentials are unacceptable"
+  },
+  {
+    "id": "OTB-713",
+    "summary": "Future status change showing in error on client profile",
+    "problemStatement": "Problem Statement:On client David Redman's profile there is a 'Scheduled status change' button showing, but it does not appear that there is a future status change in placeExpected behaviour: Future status change will only show when there is a status change set to take placeActual Behaviour: Scheduled status change is showing on the client profile when there is no apparent future status setDesired customer outcome: Scheduled status change no longer shows on client profile"
+  },
+  {
+    "id": "OTB-709",
+    "summary": "Unable to sign off letter in carer app - residetnial",
+    "problemStatement": "User story -as worker in residetnial location logged into carer app I can’t sign off carer letter Selecting save and exit doesn’t do anything URL: care2.onetouchhealth.net/cm/nursing/letter.php?l=42392&co=607920 Login and password: Sandranurse Sandranurse123"
+  },
+  {
+    "id": "OTB-708",
+    "summary": "Lookup carer by email not working on Care 1",
+    "problemStatement": "The lookup carer by email endpoint is not working on Care 1Here’s an example using a carer from The Great Care CoopThe user exists on Care 1 but her email lookup is not working (same for everyone else)care1.onetouchhealth.net/cm/in/carer/carerSummaryProfile.php?p=92480c1a.onetouchhealth.net/api/carer/get?email=tinabreen30@gmail.com"
+  },
+  {
+    "id": "OTB-707",
+    "summary": "Transforming Support Ltd SSO error",
+    "problemStatement": "Problem Statement : When trying to log in using Azure AD/Entra ID, the customer receives error AADSTS900023. Expected Behaviour : The customer should be able to log in. Details of the process for SSO are unknown. Actual Behaviour : When trying to log in, the customer receives the following error: Sorry, but we're having trouble signing you in. AADSTS900023: Specified tenant identifier 'REDACTED' is neither a valid DNS name, nor a valid external domain. Information provided by the customer in the ticket is included below. Our Microsoft Entra ID configuration is correctly configured and tested. Tenant ID: 10176608-62b1-4b2b-88c2-832a4f1db16f Client ID: f9654a5c-317e-4646-944f-ea1eaf79ebb1 Redirect URI: care2.onetouchhealth.net/cm/sso/callback.php Enterprise App and App Registration are functioning correctly. However, your login page is still generating: login.microsoftonline.com/TO_BE_UPDATED/oauth2/v2.0/authorize?client_id=TO_BE_UPDATED&response_type=code&redirect_uri=https%3A%2F%2Fcare2.onetouchhealth.net%2Fcm%2Fsso%2Fcallback.php&response_mode=query&scope=openid+profile+email+User.Read&state=b38a1854523f401b Correct the literal: TO_BE_UPDATED 2026-05-27T13:00:56ZIsrael Rodriguesisrael.rodrigues@transforming.plc.ukN/AFailure700016Application with identifier '{appIdentifier}' was not found in the directory '{tenantName}'. This can happen if the application has not been installed by the administrator of the tenant or consented to by any user in the tenant. You may have sent your authentication request to the wrong tenant.Please update or provision our tenant configuration in OneTouchHealth, because the OAuth placeholders are still unresolved."
+  },
+  {
+    "id": "OTD-422",
+    "summary": "Inconsistent event totals across reports",
+    "problemStatement": "Problem Statement : The sum of the 'Events' column in the Events Comparison report (04-05-2026 to 10-05-2026) does not match the Recurring vs one off Schedules Report 'Total Calls Week 1' column when running the 4 week report commencing 04-05-2026. Expected Behaviour : It would be expected that the figures in these columns would be the same, given both are the sum of events for a given location in the same time period Actual Behaviour : In the Events comparison report, the sum of the \"Events\" column across all pages = 3581, in the Recurring vs one off Schedules Report the sum of the column \"Total Calls week 1\" = 1748"
+  },
+  {
+    "id": "OTB-657",
+    "summary": "HTTP 500 Bug on Care 1",
+    "problemStatement": "Applewood Homecare API (Care 1)CARER Geraldine Anndrade MoralesHTTP ERROR (500) Internal Server ErrorENDPOINT qualifications/batch-create"
+  },
+  {
+    "id": "OTB-646",
+    "summary": "Shift not unnasigned when A/L is authorised with request via the carer app",
+    "problemStatement": "Reported by AlinProblem Statement : When authorising annual leave that was submitted via the carer app, if a shift is in place, it should be unassigned once the AL is authorized. At the moment, this is not happening; the shift and the AL will remain in place Expected Behaviour : The shift should be unassigned Actual Behaviour : the shift and the AL will stay on the schedule"
+  },
+  {
+    "id": "OTR-849",
+    "summary": "Medication not appearing on Grab Sheet for a client",
+    "problemStatement": "Problem Statement : A medication from the EMAR is not showing up on the print plan. Expected Behaviour : When you go to Web View, and then click Medication Details in the Layout section, and then Print, it should have a table with all of the medication from the EMAR on it. Actual Behaviour : All medication except for Clonazepam shows up on the pdf print of plan"
+  },
+  {
+    "id": "OTR-847",
+    "summary": "Medication quantity administer is null",
+    "problemStatement": "Problem Statement : Carer was able to administer medication in the app leaving the Amount Given as blank. Expected Behaviour : When they click Administer, it should auto-fill the amount given. But if they remove it so it is blank, it should stop them from saving it. Actual Behaviour : Unable to replicate. There are a number of instances where medication has been administered and the amount given is blank on the front end and 'null' on the database. The amount to be given is also null on the database but there is a value in the corresponding field on the front end See, 33 examples of where the amount given is nullSELECT * FROM `medicationResults` WHERE `clientId` = '646158' AND `amountGiven` IS NULL AND `taskDone` = '1' LIMIT 50"
+  },
+  {
+    "id": "OTR-845",
+    "summary": "Medication did not go due",
+    "problemStatement": "Problem Statement : Client was placed in the Respite Status but they forgot to select Tasks and Meds to be cancelled. Expected Behaviour : These Tasks and Meds should have gone Due and then Missed. Although the client was in a pending status, as the medication was not cancelled, expected it would show as due and subsequently missed if not actioned. Actual Behaviour : They didn't go Due and Missed. There are no medicationResults by the system for client 569271 for the 17th/18th/20th/20th SELECT * FROM `medicationResults` WHERE `clientId` = '569271' AND `dateEntered` = '2026-05-17' LIMIT 50"
+  },
+  {
+    "id": "OTB-642",
+    "summary": "Mail merge 500 error",
+    "problemStatement": "Problem Statement : When loading the ID badge generator page, user is receiving a HTTP 500 error The page loads in the Main location 2. If a picture is added to one carer profile, this pulls through to some profiles where no picture has been added Expected Behaviour : Badges should load as in the Jam example from another location within the same company Actual Behaviour : HTTP 500 error The same error occurs whether selecting create all, or selecting individual carers"
+  },
+  {
+    "id": "OTB-632",
+    "summary": "Referral reason",
+    "problemStatement": "UPDATE 25-05 Issue - referral reasons dropdown on all client pages is shown based on assigned companyId Expected behaviour: Show only referral reasons for correct company(based on companyId) including below conditions: If: locationId is null in referralReason table -this referral reason should be available in all locations within same companyId If: locationId is not null in referralReason table - this referral reason should be available only in location matching id in this table Example from locationId: 1646 (Demo company) Currently loaded data: Expected results: where issue occurs? On all add client pages below (URLs) list of available referral reasons are loaded based on company Id and"
+  },
+  {
+    "id": "OTB-629",
+    "summary": "Schedule not loading ",
+    "problemStatement": "Hi team Meath care Care AU 2 client : care-au2.onetouchhealth.net/cm/in/schedule_cancel_update.php?q=220146&month=05/2026 Scheduled not loading and there is nothing on his future scheduled either where there should be Others in this location are loading fine Please see Jam jam.dev/c/04ed5631-a806-46b9-b15c-bb931c11c3e2 thanks"
+  },
+  {
+    "id": "OTB-627",
+    "summary": "SSO App Registration Critical Issue",
+    "problemStatement": "Problem Statement : Making Space were to go live yesterday (19th May), however there appears to be an issue with the app registration in relation to their SSO. Note: they can successfully login via SSO to admin suite. This is an app issue only. Alan M has reviewed and requested this to be logged for investigation. (This ticket created by Mark Flanagan) Expected Behaviour : Using the specific SSO app token for Making Space \"MSSSO26\", they should be able to login to the app via their MS Azure Actual Behaviour : They get to the login page, but it won't let them complete login, it holds on \"logging in\""
+  },
+  {
+    "id": "OTB-626",
+    "summary": "Name of admin showing in the Right Reserved bar",
+    "problemStatement": "The name of admin is showing in the Right Reserved bar on the EMAR page. This seems to happen only on this client on this page. Having checked a few other client, I can only see it on this test client"
+  },
+  {
+    "id": "OTB-625",
+    "summary": "Conflict allowed on client schedule",
+    "problemStatement": "Problem Statement : Carer was able to be scheduled for a call while already being assigned to another call. date: 19/05/26 Carer ID: 128698 Client ID call assigned 22/08/26: 303409 Client ID call assigned 11/05/26: 453604 Expected Behaviour : On 11 May, when admin attempted to assign Josephine to the 09:30 call with client Kay Gaffney, a scheduling conflict should have been triggered. Josephine was already assigned to a 09:30 call with client Monica Hurley, which has been in place since 21 August 2025. Actual Behaviour : There was no conflict preventing the call from being assigned to the carer.Seemingly, the call was assigned from the client Kay Gaffney's schedule (see recurr notification below) while already asisgned to Monica HurleySELECT * FROM `` WHERE `recurrNum` = '274785525' LIMIT 50"
+  },
+  {
+    "id": "OTR-821",
+    "summary": "68677 New Carer App-Lag on notes",
+    "problemStatement": "Problem Statement : Once a client has multiple care notes on their profile, the app will start to lag when you are adding new care notes. This has been reported to happen on more and more clients. I have also tested it with different devices, and the lag is still there. Current clients this is happening on:Package CodeNameTotal NotesMessages from carerNotes Lag reportedBrad Bishop7791502Y - Reported by carerNikita Robinson-Suiero7791378Y - Reported by carerMalcolm Swan7761324Y - Not reported but checkedHenry Shanks591990Y - Not reported but checkedEmily Whitley517930Y - Reported by carerTimothy Bingham449856Y - Not reported but checkedSiena Uppal425703Y - Reported by carerBrian Simon Payne87459Y - Reported by carerRyan Nichols273443NAlexander Dieterle224412Y - Minor Lag not reproted by carerJonathan Brough134277NMuhammad Nehan Farooqi142243Y - Minor Lag not reproted by carerEmma Fitzgerald118241NJaida-Fox Ali65114N Expected Behaviour : no lag when adding care notes Actual Behaviour : lag when adding care notes as per the video"
+  },
+  {
+    "id": "OTR-819",
+    "summary": "68451 - All Day Medication going missed before end of day ",
+    "problemStatement": "Problem Statement : when creating a medication on a client profile EMAR using the ALL DAY or ANY option, it seems that the script will not function correctly, as even if the day hasn't passed, the medication will display as missed. Expected Behaviour : the medication to stay available until 23:55 Actual Behaviour : It will appear as missed on the day that it should be available"
+  },
+  {
+    "id": "OTB-624",
+    "summary": "New Starter Account Activation - Shaquanna Henry",
+    "problemStatement": "Problem Statement : Admin not receiving account activation email Email: shaquanna.henry@harmonyhealthcare.co.uk Expected Behaviour : She successfully receives the Account Activation Email. Actual Behaviour : email not delivering as it is \"Permanent - OnAccountSuppressionList\""
+  },
+  {
+    "id": "OTD-399",
+    "summary": "ZD 68564 Block shift Script Missing From Finance Tab",
+    "problemStatement": "ImpactThe Blockshift script is missing from the Finance Section. This issue prevents users from running payroll. Reported first by Hales, but it’s missing from all care2 companies.Expected behaviourThe BlockShift Script should be visible in the Finance list. The link brings you to this page: care2.onetouchhealth.net/cm/in/generateBlockshifts.phpIt’s currently working in demo.Actual behaviourThe BlockShift Script is not showing at all for all companies other than demo.Steps to reproduceLog into any care2 company other than demoNavigate to the Finance tab.Check the finance settings.Please ensure when it’s fixed it’s visible from the dashboard on both the old UX and new UXcare2.onetouchhealth.net/cm/in/menu.phpcare2.onetouchhealth.net/cm/in/menuNewV.phpEnvironmentServer: Care2WorkaroundsN/AOther informationTicket link: onetouchhealth.zendesk.com/agent/tickets/68564"
+  },
+  {
+    "id": "OTD-421",
+    "summary": "Cannot delete timesheets from a clients schedule [IN-0038458]",
+    "problemStatement": "the person doing this has the permission to do so and usually does this from the schedule See JAM attached I have attempted to delete on there behalf unable to do so jam.dev/c/8b44b194-0dc9-431d-97a9-87d12feb5e89 Mclean are trying to delete a time sheet Button not working in OTH Mclean care Locations care au 6000 and locations 1793"
+  },
+  {
+    "id": "OTB-621",
+    "summary": "Update settings URL on main roster (2 weeks view)",
+    "problemStatement": "Update schedule settings url on new residential schedule page to: cm/in/residentialCare_v2/ScheduleSettings.php Related tasks:"
+  },
+  {
+    "id": "OTB-620",
+    "summary": "Incorrect residential roster settings URL",
+    "problemStatement": "Follow up to task Update settings page url to below: cm/in/residentialCare_v2/ScheduleSettings.php currently URL is in/company/ScheduleSettings.php and it results in error"
+  },
+  {
+    "id": "OTR-800",
+    "summary": "App error on Assessments ",
+    "problemStatement": "App error on Assessments - client assessments"
+  },
+  {
+    "id": "OTB-619",
+    "summary": "Requested Hours showing in app despite area being set to 'none'",
+    "problemStatement": "Problem Statement : The request hours permission is set to none for all carer permission templates, but carers have the option to request hours in the app. carer used to test K avesana Kanani 256510 Expected Behaviour : If request hours is set to none, carers should not have the option to request hours. In table caringAppLevels, column offerWorkShowAll is '5' for all permission classes. I assume this is 'none' , thus calls should not be showing for carers Actual Behaviour : Carers have the availability schedule with hours to request in their app"
+  },
+  {
+    "id": "OTB-618",
+    "summary": "Re: OneTouch - When creating a carer HR files are not listed.",
+    "problemStatement": "Problem Statement : You can set up HR Files to apply to a position that will be automatically added to a new Carer when you assign that position at creation. They say this did not occur for Carer Karen Omeire (528248) via the api. (payload image attached) Expected Behaviour : They added a new Carer in their third-party platform that is connected to OTH via API. They assigned a position, and the expectation was that when this information was imported to OneTouch, the HR Files would be added to them. Actual Behaviour : The HR Files did not automatically add like they do when you assign the position to the Carer when creating them in OTH directly."
+  },
+  {
+    "id": "OTD-341",
+    "summary": "Expenses files not opening",
+    "problemStatement": "Problem Statement : When you try to open an attachment in Confirm Expenses v2, you get an error message. It seems to be happening to some of the expenses, not all of them This is happening between pages 5 and 8 Doesn't seem to be any consistency in which files are having the issue, have observed the issue with .jpeg and .jpg files and some files with characters such as underscores open successfully while others do not Expected Behaviour : When you click on the attachment, the pop-up should appear where you can save and view it Actual Behaviour : When you click on the expense attachment, you get an error message '********************* ERROR READING FILE Screenshot_20260428_224303_MobiOffice.jpg ********************'"
+  },
+  {
+    "id": "OTD-340",
+    "summary": "Journey address input freezes after first character on inter-travel logging page",
+    "problemStatement": "Statement of IssueOn the Journey page within the carer portal, the address input field used for logging inter-travel (travel that takes place within a visit) becomes unresponsive after a single character is entered. The Google Maps autocomplete integration appears to trigger a freeze on keystroke, preventing the carer from completing their address entry and saving their journey.Affected URL: care2.onetouchhealth.net/cm/caring/journey.php?recurrId=172708242&timesheetId=200200823Steps to ReproduceLog into the carer portal as a carer user.Navigate to an active or completed visit (call).Click the Journey icon to open the inter-travel logging page.In the Address input field, begin typing a location.Observe that after the first character is entered, the input field freezes and no further characters can be typed.Acceptance CriteriaThe carer can type a full address into the Address input field without interruption.Google Maps autocomplete suggestions appear as expected while the carer types.The carer can select a suggested address or complete manual entry.The journey can be saved successfully and submitted for admin confirmation.The issue is reproducible across supported browsers (Chrome, Edge, Safari) and is verified as resolved in all of them."
+  },
+  {
+    "id": "OTD-342",
+    "summary": "Delete timesheet from schedule not working",
+    "problemStatement": "Since the deployment yesterday there has been a bug reported by multiple companies that they are unable to delete a timesheet from the schedule as they previously could. This is not permission related, that cause has already been investigated and ruled out.I believe it’s related to This is occurring from the schedule page: care2.onetouchhealth.net/cm/in/schedule_cancel_update.php?q=413403&month=05/2026When you click on the ‘Delete Timesheet’ nothing happensPlease ensure you can delete a single timesheet on future, today, and past events. *To test past events, you’ll need the delete pin which is 7272.The only time you should not be able to delete a timesheet is when it has already been invoiced, in which case you should see this message."
+  },
+  {
+    "id": "OTB-614",
+    "summary": "Carer Schedules removed when status changed via api",
+    "problemStatement": "Problem Statement : Carer's schedules not becoming unassigned when carer is changed to an archived status via API. Re-updating the status to archived on OT still does not remove the carer from the calls, as seen with example 1. 3 examples Vanessa Boyle - 258583Marked archived on 30/04/2026. Remarked as archived 14./05/26. Calls remaining: Recurring event Sat & Sun from 13/06 onwards 2. Katja Nowack - 236968 Marked as archived on 01/03/25. Calls remaining: Recurring calls on Saturdays from 30/05/26 onwards 3. Maxine Overton - 182747 Marked archived on 12/05/26. Calls remaining: Mon-Thurs & Sat- Sun from 25/05/26 onwards Expected Behaviour : Changing carer to archived status should assign them from the call. Actual Behaviour : In these three examples, the carers were marked as archived after being assigned to the call, yet they remain."
+  },
+  {
+    "id": "OTD-337",
+    "summary": "Schedule difference report discrepancies ",
+    "problemStatement": "Problem Statement : The schedule difference report is not showing the correct number of minutes that calls are going over. Example carer Gemma Cole ID 491447 Call with client Jennifer Ridgewell ID 347719 Date: 15.01.26 Scheduled time: 13:30 - 15:30 The actual duration of the call is 169:52:15 (hrs)SELECT * FROM `timesheet` WHERE `id` = '180949115' LIMIT 50This appears to be the same for other calls that are far beyond their scheduled duration Expected Behaviour : Schedule difference should show the number of minute the call is over the duration scheduled ~10,080 Actual Behaviour : Instead, it is showing 60 minutes under"
+  },
+  {
+    "id": "OTB-613",
+    "summary": "Calls without timesheets showing a clock out time in schedule difference report",
+    "problemStatement": "Problem Statement : In the schedule difference report, it is showing clock-out times for some carers, but no clock-in times. To use one example, on the 19th of April, there are no clock-in times for Kafayat's call with the client Zeninella, but there is the exact same clock-out time of 21.35 for the 3 calls. They were all different times of the day, and there are no timesheets for these calls. There are no deleted timesheets for these calls either Expected Behaviour : If there is a clock-out time, there should also be a clock-in time. Actual Behaviour : There are clock-out times, but no clock-in times, and no timesheets"
+  },
+  {
+    "id": "OTB-611",
+    "summary": "Error opening HR Files",
+    "problemStatement": "Problem Statement : When clicking on the file uploaded to Carer Chukwuemeka Nwoke's (306456) \"NVB1 Form\" HR File/Qualification, the page returns an ERROR READING FILE error. Expected Behaviour : When you click on the file attached to the \"NVB1 Form\" HR File/Qualification, the Windows \"Save as\" pop-up should appear, where you can save the file to your device. Actual Behaviour : When you click on the attached file, named \"Chukwuemeka_Nwoke-Garda_Vetting (1).pdf\", the page turns white and displays the following error: ********************* ERROR READING FILE 161/482/carer/306456/hr-files/Chukwuemeka_Nwoke-Garda_Vetting (1).pdf ********************"
+  },
+  {
+    "id": "OTR-757",
+    "summary": "Unable to print care plan",
+    "problemStatement": "Problem Statement : When you press the orange print button in the webview of a plan, you get the error message below. It appears if you have no option ticked, and also if you have some ticked. Error message: 'object(Mpdf\\MpdfException)#64 (8) { [\"message\":protected]=> string(65) \"Invalid input characters. Did you set $mpdf->in_charset properly?\" [\"string\":\"Exception\":private]=> string(0) \"\" [\"code\":protected]=> int(0) [\"file\":protected]=> string(65) \"/var/www/cm/in/assets/pdfMaker/mpdf/vendor/mpdf/mpdf/src/Mpdf.php\" [\"line\":protected]=> int(25987) [\"trace\":\"Exception\":private]=> array(2) { [0]=> array(5) { [\"file\"]=> string(65) \"/var/www/cm/in/assets/pdfMaker/mpdf/vendor/mpdf/mpdf/src/Mpdf.php\" [\"line\"]=> int(13150) [\"function\"]=> string(11) \"purify_utf8\" [\"class\"]=> string(9) \"Mpdf\\Mpdf\" [\"type\"]=> string(2) \"->\" } [1]=> array(5) { [\"file\"]=> string(47) \"/var/www/cm/in/clientDetailsPrint_update_v2.php\" [\"line\"]=> int(2061) [\"function\"]=> string(9) \"WriteHTML\" [\"class\"]=> string(9) \"Mpdf\\Mpdf\" [\"type\"]=> string(2) \"->\" } } [\"previous\":\"Exception\":private]=> NULL [\"severity\":protected]=> int(1) }' The blue print buttons work fine. A few companies have submitted tickets saying they're getting the same error - Mediline Supported Living and BB Derbyshire Expected Behaviour : When you click Print, the plan would open in a separate window Actual Behaviour : The page loads for a while, and then you get the error message displayed, and the plan doesn't open"
+  },
+  {
+    "id": "OTD-331",
+    "summary": "No data in timesheet table - Power BI",
+    "problemStatement": "Problem Statement : We use the Power BI Gateway which has a copy of the MySQL database however, timesheets has no data Expected Behaviour : Based on what is being said, timesheets should have data Actual Behaviour : Timesheet table has no data"
+  },
+  {
+    "id": "OTB-609",
+    "summary": "Email Governance Link not directing to SSO",
+    "problemStatement": "Problem Statement : Customer is reporting that the links in the emails they receive for Governance Tasks do not prompt them to sign in using their Azure AD/Entra ID SSO. Expected Behaviour : The links from the email should bring them to their Azure AD/Entra ID SSO login page. Actual Behaviour : They are prompted to log in via the regular OneTouch login page."
+  },
+  {
+    "id": "OTD-330",
+    "summary": "Trailing comma in jobtypeGroupName.jobTypeList breaking downstream pages",
+    "problemStatement": "ImpactA trailing comma in the jobTypeList column of the jobtypeGroupName table is causing issues. This malformed data breaks downstream pages that expect a clean comma-separated list of IDs.Expected behaviourThe jobTypeList column should contain a clean comma-separated list without a trailing comma.Actual behaviourThe jobTypeList column contains a trailing comma, which disrupts the functionality of pages that parse this column.Steps to reproduceNavigate to cm/in/compJobType_aus.php(From dashboard click on the ‘Company Settings’ on left hand menu, find jobtype settings page)Make a change to a job type (click on edit / delete , and change the jobtype group)Save the changesInspect the jobtypeGroupName.jobTypeList column in the database for that recordObserve: the value has a trailing comma (e.g. 2142,2151,2152,2288,)EnvironmentN/AWorkaroundsN/AOther informationThe jobTypeList column stores a comma-separated list of job type IDs (e.g. 2142,2151,2152,2288).The primary suspect for the issue is cm/in/compJobType_aus.php, which is used more frequently.There is also a secondary page, cm/in/jobTypeSetup.php, that writes to this column.Functional requirements include fixing the save logic, investigating jobTypeSetup.php, and writing a data cleanup script to remove trailing commas from existing rows.Success CriteriaYou can create a new jobtype without a comma being introduced to the end of a string cm/in/compJobType_aus.phpYou can delete a jobtype without a comma being introduced to the end of a string cm/in/compJobType_aus.phpYou can edit a jobtype without a comma being introduced to the end of a string cm/in/compJobType_aus.phpYou can edit the inclusions of a jobtype group without a comma being introduced at the end of a string cm/in/jobTypeSetup.php"
+  },
+  {
+    "id": "OTD-329",
+    "summary": "archived carers showing up on carer pay report ",
+    "problemStatement": "Problem Statement : When you run Carer Pay as normal with no area filter applied, it runs as normal. However, when you run it with the areas Erris 1, Erris 2, Mayo Area 1, and Area 2 selected, then all the archived and pending carers show in the list. The carers I looked at were archived as far back as 2021. It seems to only be happening in the Regional Health Area F location and in the Mayo areas. Expected Behaviour : The carers who are archived or pending with no timesheets should not show on the report Actual Behaviour : Archived carers are only showing when you filter the report by area. If you have branch access applied, they will still show when you filter the report by area. Approximately 271 carers who are archived or pending are showing on Carer Pay V1 report when areas mentioned are selected prior to running the report"
+  },
+  {
+    "id": "OTB-607",
+    "summary": "CLONE - #62032 File Export missing data HCM",
+    "problemStatement": "Development ScopeWhen adding a product, the range is selected from a dropdown. We need to ensure that the corresponding text is also saved in the hmproduct table under the productRange field, as this field is widely used across reporting. Changing the reporting is not an option, as it is too extensively embedded throughout the system.Dev Scope FinishedProblem : File Export missing data Expected : Data in \"range\" pulls through onto exportActual : Some products do not have the \"range\" when exported"
+  },
+  {
+    "id": "OTB-605",
+    "summary": "67914 - Area filter (branch access) does not apply to hr files due",
+    "problemStatement": "Problem Statement: Filtering Areas using the Branch Filter on the Main Dashboard does not affect the HR File Due section. Expected Behaviour: When the Branch Filter is applied to select a specific Area or multiple Areas, only the HR Files that are Due for that/those Areas will display on the HR File Due section on the Main Dashboard. Actual Behaviour: The Area filter (on branch access) does not affect the HR Files Due section. Both the Branch and Work Group filters do work as expectedThis applies to both the Legacy UI and the New UI."
+  },
+  {
+    "id": "OTB-603",
+    "summary": "MAINLY CARE1 67922 Error when sending SMS",
+    "problemStatement": "Problem Statement : The \"Send SMS to Carer\"/Instacare feature returns an HTTP Error 500 consistently on Care1 and does not load on certain Care2 Locations. Expected Behaviour : After clicking \"OK\" to accept that sending the SMS will apply a charge to the account, no error should appear. The SMS should simply be sent to the Carer, and a green \"Message has been Sent\" banner should appear at the top of the page. Actual Behaviour : Checking the DB (see below) it does appear that the SMS's are being delivered and the feature is functioning correctly however the errors persist as below : Care 1 Admin Enda Spillane (169430) receives a HTTP ERROR 500 page when using the SMS feature to send a text to Carer Lisa Golden (42648) for the 19:00-20:00 call with Client Maurice O'Mahony (321515) on 09/05. After clicking the \"Send Texts/Emails\" button and accepting that sending an SMS will charge the account, the page returns the following error: This page isn’t workingcare2.onetouchhealth.net is currently unable to handle this request. HTTP ERROR 500 Issue also replicated in my Care1 testing location - (1069)Steffie Demo Care2 Clicking the \"Send SMS to Carer\" button causes the browser tab to appear as though it is loading, but it never moves to the next page. This occurs on my demo (2517)Steffie Demo, but not on the main demo location (1)Demo. I could not identify why."
+  },
+  {
+    "id": "OTB-606",
+    "summary": "#62032 File Export missing data",
+    "problemStatement": "Problem : File Export missing data Expected : Data in \"range\" pulls through onto exportActual : Some products do not have the \"range\" when exported"
+  },
+  {
+    "id": "OTR-701",
+    "summary": "#67818 Stopped med not appearing on stopped med report",
+    "problemStatement": "Problem : Stopped medication not appearing on stopped medication report Actual : An admin stopped a medication for the client Athif Khan 1-1, but it is not showing in the Stopped Medication Report, regardless of the date range ran for the report Expected : Any \"stopped\" medication should appear in the stopped medication report. Admin India Graham stopped it at 10:59 on 06/05/2026 (see DB screenshot), but it does not appear on the report"
+  },
+  {
+    "id": "OTR-700",
+    "summary": "#67803 Missing EMAR audit page ",
+    "problemStatement": "Problem : First page of EMAR audit PDF is not displaying company logo, client information etc. Expected : The first page displays the same info as the other pages in this clients EMAR Audit PDF , as it does for any other client and is not half blankActual : The top half of the first page of the EMAR Audit PDF is blank for this client (328156) This information is visible on the next page, but this is blank on the first page of the completed audits.When clicking the EMAR Audit button on the EMAR, the information does display. It only disappears once completed.This only looks to be impacting this Client."
+  },
+  {
+    "id": "OTB-599",
+    "summary": "#67856 - Main Dashboard broken ",
+    "problemStatement": "Problem Statement The Main Dashboard is not fully functional in the customer's company, as well as the demo. on the old UI/UX This is not impacting all companies. So far we have Access , be independent , rainbow care group , active List of Issues Branch filter is broken.Notifications sidebar is not loading any data.Quick Access Carer and Quick Access Client do not work.Hovering over them also does not display the usual pop-up. It's broken and shows its formatting.The VIEW CLOCK-IN STATUS button in the Current Clock-In Status section no longer works,The Hours section \"All Job Types\" drop-down is broken. Recording showing issue as well as expected appearance and function is attached."
+  },
+  {
+    "id": "OTD-326",
+    "summary": "April HFH Export",
+    "problemStatement": "Issue raised by care2 company HFH - companyId 197They are trying to get their payroll report out of the system that uses our background download script. The report originates from this page: care2.onetouchhealth.net/cm/in/carerPayPerClient_ld_travel.phpThe admin tried to download it 35 timesOther issue with may or may not be related … their dashboard is getting an error, it’s not loading properly. Alerts and notifications are not loadingand the dropdown on the hours wont close"
+  },
+  {
+    "id": "OTD-323",
+    "summary": "Auto column visibility hiding functionally required column",
+    "problemStatement": "SummaryAs a user confirming timesheets, I want the \"Extras\" column to be visible by default on the Time Confirm page so that I can see and generate recurring expenses alongside timesheets without needing to manually unhide the column.Background & ContextThe Time Confirm page (confirmTime_signed_v2.php) on care1 has a column visibility feature. The \"Extras\" column shows recurring expenses that need to be generated alongside the timesheet. However, this column is hidden by default. When hidden, the associated expense does not generate — meaning users are confirming timesheets that should have expenses attached without being aware. This can result in incorrect pay and billing. This affects all customers on care1 who use the recurring expenses function.Page: care1.onetouchhealth.net/cm/in/confirmTime_signed_v2.php Scope: care1 onlyFunctional RequirementsThe \"Extras\" column must be visible by default when the Time Confirm page loads.Users should still be able to hide/show the column via the existing column visibility controls.No changes to how recurring expenses are generated — the existing behaviour (expenses only generate when the column is visible) remains as-is.Acceptance CriteriaAC1 — Extras column visible on page loadGiven a user navigates to the Time Confirm pageWhen the page loadsThen the \"Extras\" column is visible without any manual actionAC2 — Expense generates when column is visibleGiven the Extras column is visible by defaultWhen a timesheet with a recurring expense is confirmedThen the expense is generated as expectedAC3 — Manual hide still worksGiven a user manually hides the Extras column via column visibilityWhen they confirm a timesheetThen the existing behaviour applies (expense does not generate)AC4 — Applies to all care1 usersGiven this change is deployedWhen any user on care1 loads the Time Confirm pageThen the Extras column default applies regardless of customer/area"
+  },
+  {
+    "id": "OTD-424",
+    "summary": "Re: [One Touch Health] Re: Fw: Jodie Reed wages error",
+    "problemStatement": "Problem Statement : The expense type Customer Travel Mileage - Use when taking customer out has a 30% pay attached to it. For carer Jodie Reed, her expenses are manually adjusted to pay 40% of the expense. This has been manually updated in Confirm Expenses v2. The expenses still reflect the 30% value in the payroll summary. This is the case in both the preview and the locked down payroll. The date range is 24/04 - 23/05 A few examples: One that was confirmed 06-05-2026 12:56, for the client Bluebird Care Market Harborough And Oadby, the amount was 6.2. At 30 %, that should be 1.86, which is what is showing in payroll. Ajay has changed the amount to 2.48 in confirm expensesOne that was confirmed 14-05-2026 16:06, for client Iris Terry, the amount is 15.5. At 30%, that would be 4.65, which is showing on Carer Pay v2. Ajay changed the amount to 6.2.One that was confirmed 14-05-2026 16:06, for client Iris Terry, the amount is 18.9. 30% = 5.67. Ajay has changed the amount to 7.56 It's happening for all of Jodie's expenses. Expected Behaviour : When you update the expense amount to pay, this should pull through to payroll Actual Behaviour : The old, unedited amount is showing in payroll. The correct values are showing on the cmExpenses Table"
+  },
+  {
+    "id": "OTD-423",
+    "summary": "Unable to add Job Type Groups by location",
+    "problemStatement": "Moved from OTR-851 (Care & Compliance) to OTD (Commercial & Operational) board.Replicated on care2-staging. Identified during staging tests.Go to Dashboard → open Location Settings for a location (e.g. Demo) → click Settings in left-hand sidemenu → click ‘Job Type Set Up’ → click Add → provide input and save → confirm you are taken to a 500 error pageJam –"
+  },
+  {
+    "id": "OTB-714",
+    "summary": "Unable to connect to OneTouch Power BI Gateway VPN",
+    "problemStatement": "Problem Statement : Customer cannot connect to the OneTouch VPN Gateway. Expected Behaviour : Customer can connect to the VPN Gateway without issue. Actual Behaviour : When trying to connect to the Onetouch Health HFH HealthCare Data Gateway, the customer receives the following message: Can't connect to OneTouch Health HFH HealthCare Data Gateway IKE authentication credentials are unacceptable"
+  },
+  {
+    "id": "OTB-713",
+    "summary": "Future status change showing in error on client profile",
+    "problemStatement": "Problem Statement:On client David Redman's profile there is a 'Scheduled status change' button showing, but it does not appear that there is a future status change in placeExpected behaviour: Future status change will only show when there is a status change set to take placeActual Behaviour: Scheduled status change is showing on the client profile when there is no apparent future status setDesired customer outcome: Scheduled status change no longer shows on client profile"
+  },
+  {
+    "id": "OTB-709",
+    "summary": "Unable to sign off letter in carer app - residetnial",
+    "problemStatement": "User story -as worker in residetnial location logged into carer app I can’t sign off carer letter Selecting save and exit doesn’t do anything URL: care2.onetouchhealth.net/cm/nursing/letter.php?l=42392&co=607920 Login and password: Sandranurse Sandranurse123"
+  },
+  {
+    "id": "OTB-708",
+    "summary": "Lookup carer by email not working on Care 1",
+    "problemStatement": "The lookup carer by email endpoint is not working on Care 1Here’s an example using a carer from The Great Care CoopThe user exists on Care 1 but her email lookup is not working (same for everyone else)care1.onetouchhealth.net/cm/in/carer/carerSummaryProfile.php?p=92480c1a.onetouchhealth.net/api/carer/get?email=tinabreen30@gmail.com"
+  },
+  {
+    "id": "OTB-707",
+    "summary": "Transforming Support Ltd SSO error",
+    "problemStatement": "Problem Statement : When trying to log in using Azure AD/Entra ID, the customer receives error AADSTS900023. Expected Behaviour : The customer should be able to log in. Details of the process for SSO are unknown. Actual Behaviour : When trying to log in, the customer receives the following error: Sorry, but we're having trouble signing you in. AADSTS900023: Specified tenant identifier 'REDACTED' is neither a valid DNS name, nor a valid external domain. Information provided by the customer in the ticket is included below. Our Microsoft Entra ID configuration is correctly configured and tested. Tenant ID: 10176608-62b1-4b2b-88c2-832a4f1db16f Client ID: f9654a5c-317e-4646-944f-ea1eaf79ebb1 Redirect URI: care2.onetouchhealth.net/cm/sso/callback.php Enterprise App and App Registration are functioning correctly. However, your login page is still generating: login.microsoftonline.com/TO_BE_UPDATED/oauth2/v2.0/authorize?client_id=TO_BE_UPDATED&response_type=code&redirect_uri=https%3A%2F%2Fcare2.onetouchhealth.net%2Fcm%2Fsso%2Fcallback.php&response_mode=query&scope=openid+profile+email+User.Read&state=b38a1854523f401b Correct the literal: TO_BE_UPDATED 2026-05-27T13:00:56ZIsrael Rodriguesisrael.rodrigues@transforming.plc.ukN/AFailure700016Application with identifier '{appIdentifier}' was not found in the directory '{tenantName}'. This can happen if the application has not been installed by the administrator of the tenant or consented to by any user in the tenant. You may have sent your authentication request to the wrong tenant.Please update or provision our tenant configuration in OneTouchHealth, because the OAuth placeholders are still unresolved."
+  },
+  {
+    "id": "OTD-422",
+    "summary": "Inconsistent event totals across reports",
+    "problemStatement": "Problem Statement : The sum of the 'Events' column in the Events Comparison report (04-05-2026 to 10-05-2026) does not match the Recurring vs one off Schedules Report 'Total Calls Week 1' column when running the 4 week report commencing 04-05-2026. Expected Behaviour : It would be expected that the figures in these columns would be the same, given both are the sum of events for a given location in the same time period Actual Behaviour : In the Events comparison report, the sum of the \"Events\" column across all pages = 3581, in the Recurring vs one off Schedules Report the sum of the column \"Total Calls week 1\" = 1748"
+  },
+  {
+    "id": "OTB-657",
+    "summary": "HTTP 500 Bug on Care 1",
+    "problemStatement": "Applewood Homecare API (Care 1)CARER Geraldine Anndrade MoralesHTTP ERROR (500) Internal Server ErrorENDPOINT qualifications/batch-create"
+  },
+  {
+    "id": "OTB-646",
+    "summary": "Shift not unnasigned when A/L is authorised with request via the carer app",
+    "problemStatement": "Reported by AlinProblem Statement : When authorising annual leave that was submitted via the carer app, if a shift is in place, it should be unassigned once the AL is authorized. At the moment, this is not happening; the shift and the AL will remain in place Expected Behaviour : The shift should be unassigned Actual Behaviour : the shift and the AL will stay on the schedule"
+  },
+  {
+    "id": "OTR-849",
+    "summary": "Medication not appearing on Grab Sheet for a client",
+    "problemStatement": "Problem Statement : A medication from the EMAR is not showing up on the print plan. Expected Behaviour : When you go to Web View, and then click Medication Details in the Layout section, and then Print, it should have a table with all of the medication from the EMAR on it. Actual Behaviour : All medication except for Clonazepam shows up on the pdf print of plan"
+  },
+  {
+    "id": "OTR-847",
+    "summary": "Medication quantity administer is null",
+    "problemStatement": "Problem Statement : Carer was able to administer medication in the app leaving the Amount Given as blank. Expected Behaviour : When they click Administer, it should auto-fill the amount given. But if they remove it so it is blank, it should stop them from saving it. Actual Behaviour : Unable to replicate. There are a number of instances where medication has been administered and the amount given is blank on the front end and 'null' on the database. The amount to be given is also null on the database but there is a value in the corresponding field on the front end See, 33 examples of where the amount given is nullSELECT * FROM `medicationResults` WHERE `clientId` = '646158' AND `amountGiven` IS NULL AND `taskDone` = '1' LIMIT 50"
+  },
+  {
+    "id": "OTR-845",
+    "summary": "Medication did not go due",
+    "problemStatement": "Problem Statement : Client was placed in the Respite Status but they forgot to select Tasks and Meds to be cancelled. Expected Behaviour : These Tasks and Meds should have gone Due and then Missed. Although the client was in a pending status, as the medication was not cancelled, expected it would show as due and subsequently missed if not actioned. Actual Behaviour : They didn't go Due and Missed. There are no medicationResults by the system for client 569271 for the 17th/18th/20th/20th SELECT * FROM `medicationResults` WHERE `clientId` = '569271' AND `dateEntered` = '2026-05-17' LIMIT 50"
+  },
+  {
+    "id": "OTB-642",
+    "summary": "Mail merge 500 error",
+    "problemStatement": "Problem Statement : When loading the ID badge generator page, user is receiving a HTTP 500 error The page loads in the Main location 2. If a picture is added to one carer profile, this pulls through to some profiles where no picture has been added Expected Behaviour : Badges should load as in the Jam example from another location within the same company Actual Behaviour : HTTP 500 error The same error occurs whether selecting create all, or selecting individual carers"
+  },
+  {
+    "id": "OTB-632",
+    "summary": "Referral reason",
+    "problemStatement": "UPDATE 25-05 Issue - referral reasons dropdown on all client pages is shown based on assigned companyId Expected behaviour: Show only referral reasons for correct company(based on companyId) including below conditions: If: locationId is null in referralReason table -this referral reason should be available in all locations within same companyId If: locationId is not null in referralReason table - this referral reason should be available only in location matching id in this table Example from locationId: 1646 (Demo company) Currently loaded data: Expected results: where issue occurs? On all add client pages below (URLs) list of available referral reasons are loaded based on company Id and"
+  },
+  {
+    "id": "OTB-629",
+    "summary": "Schedule not loading ",
+    "problemStatement": "Hi team Meath care Care AU 2 client : care-au2.onetouchhealth.net/cm/in/schedule_cancel_update.php?q=220146&month=05/2026 Scheduled not loading and there is nothing on his future scheduled either where there should be Others in this location are loading fine Please see Jam jam.dev/c/04ed5631-a806-46b9-b15c-bb931c11c3e2 thanks"
+  },
+  {
+    "id": "OTB-627",
+    "summary": "SSO App Registration Critical Issue",
+    "problemStatement": "Problem Statement : Making Space were to go live yesterday (19th May), however there appears to be an issue with the app registration in relation to their SSO. Note: they can successfully login via SSO to admin suite. This is an app issue only. Alan M has reviewed and requested this to be logged for investigation. (This ticket created by Mark Flanagan) Expected Behaviour : Using the specific SSO app token for Making Space \"MSSSO26\", they should be able to login to the app via their MS Azure Actual Behaviour : They get to the login page, but it won't let them complete login, it holds on \"logging in\""
+  },
+  {
+    "id": "OTB-626",
+    "summary": "Name of admin showing in the Right Reserved bar",
+    "problemStatement": "The name of admin is showing in the Right Reserved bar on the EMAR page. This seems to happen only on this client on this page. Having checked a few other client, I can only see it on this test client"
+  },
+  {
+    "id": "OTB-625",
+    "summary": "Conflict allowed on client schedule",
+    "problemStatement": "Problem Statement : Carer was able to be scheduled for a call while already being assigned to another call. date: 19/05/26 Carer ID: 128698 Client ID call assigned 22/08/26: 303409 Client ID call assigned 11/05/26: 453604 Expected Behaviour : On 11 May, when admin attempted to assign Josephine to the 09:30 call with client Kay Gaffney, a scheduling conflict should have been triggered. Josephine was already assigned to a 09:30 call with client Monica Hurley, which has been in place since 21 August 2025. Actual Behaviour : There was no conflict preventing the call from being assigned to the carer.Seemingly, the call was assigned from the client Kay Gaffney's schedule (see recurr notification below) while already asisgned to Monica HurleySELECT * FROM `` WHERE `recurrNum` = '274785525' LIMIT 50"
+  },
+  {
+    "id": "OTR-821",
+    "summary": "68677 New Carer App-Lag on notes",
+    "problemStatement": "Problem Statement : Once a client has multiple care notes on their profile, the app will start to lag when you are adding new care notes. This has been reported to happen on more and more clients. I have also tested it with different devices, and the lag is still there. Current clients this is happening on:Package CodeNameTotal NotesMessages from carerNotes Lag reportedBrad Bishop7791502Y - Reported by carerNikita Robinson-Suiero7791378Y - Reported by carerMalcolm Swan7761324Y - Not reported but checkedHenry Shanks591990Y - Not reported but checkedEmily Whitley517930Y - Reported by carerTimothy Bingham449856Y - Not reported but checkedSiena Uppal425703Y - Reported by carerBrian Simon Payne87459Y - Reported by carerRyan Nichols273443NAlexander Dieterle224412Y - Minor Lag not reproted by carerJonathan Brough134277NMuhammad Nehan Farooqi142243Y - Minor Lag not reproted by carerEmma Fitzgerald118241NJaida-Fox Ali65114N Expected Behaviour : no lag when adding care notes Actual Behaviour : lag when adding care notes as per the video"
+  },
+  {
+    "id": "OTR-819",
+    "summary": "68451 - All Day Medication going missed before end of day ",
+    "problemStatement": "Problem Statement : when creating a medication on a client profile EMAR using the ALL DAY or ANY option, it seems that the script will not function correctly, as even if the day hasn't passed, the medication will display as missed. Expected Behaviour : the medication to stay available until 23:55 Actual Behaviour : It will appear as missed on the day that it should be available"
+  },
+  {
+    "id": "OTB-624",
+    "summary": "New Starter Account Activation - Shaquanna Henry",
+    "problemStatement": "Problem Statement : Admin not receiving account activation email Email: shaquanna.henry@harmonyhealthcare.co.uk Expected Behaviour : She successfully receives the Account Activation Email. Actual Behaviour : email not delivering as it is \"Permanent - OnAccountSuppressionList\""
+  },
+  {
+    "id": "OTD-399",
+    "summary": "ZD 68564 Block shift Script Missing From Finance Tab",
+    "problemStatement": "ImpactThe Blockshift script is missing from the Finance Section. This issue prevents users from running payroll. Reported first by Hales, but it’s missing from all care2 companies.Expected behaviourThe BlockShift Script should be visible in the Finance list. The link brings you to this page: care2.onetouchhealth.net/cm/in/generateBlockshifts.phpIt’s currently working in demo.Actual behaviourThe BlockShift Script is not showing at all for all companies other than demo.Steps to reproduceLog into any care2 company other than demoNavigate to the Finance tab.Check the finance settings.Please ensure when it’s fixed it’s visible from the dashboard on both the old UX and new UXcare2.onetouchhealth.net/cm/in/menu.phpcare2.onetouchhealth.net/cm/in/menuNewV.phpEnvironmentServer: Care2WorkaroundsN/AOther informationTicket link: onetouchhealth.zendesk.com/agent/tickets/68564"
+  },
+  {
+    "id": "OTD-421",
+    "summary": "Cannot delete timesheets from a clients schedule [IN-0038458]",
+    "problemStatement": "the person doing this has the permission to do so and usually does this from the schedule See JAM attached I have attempted to delete on there behalf unable to do so jam.dev/c/8b44b194-0dc9-431d-97a9-87d12feb5e89 Mclean are trying to delete a time sheet Button not working in OTH Mclean care Locations care au 6000 and locations 1793"
+  },
+  {
+    "id": "OTB-621",
+    "summary": "Update settings URL on main roster (2 weeks view)",
+    "problemStatement": "Update schedule settings url on new residential schedule page to: cm/in/residentialCare_v2/ScheduleSettings.php Related tasks:"
+  },
+  {
+    "id": "OTB-620",
+    "summary": "Incorrect residential roster settings URL",
+    "problemStatement": "Follow up to task Update settings page url to below: cm/in/residentialCare_v2/ScheduleSettings.php currently URL is in/company/ScheduleSettings.php and it results in error"
+  },
+  {
+    "id": "OTR-800",
+    "summary": "App error on Assessments ",
+    "problemStatement": "App error on Assessments - client assessments"
+  },
+  {
+    "id": "OTB-619",
+    "summary": "Requested Hours showing in app despite area being set to 'none'",
+    "problemStatement": "Problem Statement : The request hours permission is set to none for all carer permission templates, but carers have the option to request hours in the app. carer used to test K avesana Kanani 256510 Expected Behaviour : If request hours is set to none, carers should not have the option to request hours. In table caringAppLevels, column offerWorkShowAll is '5' for all permission classes. I assume this is 'none' , thus calls should not be showing for carers Actual Behaviour : Carers have the availability schedule with hours to request in their app"
+  },
+  {
+    "id": "OTB-618",
+    "summary": "Re: OneTouch - When creating a carer HR files are not listed.",
+    "problemStatement": "Problem Statement : You can set up HR Files to apply to a position that will be automatically added to a new Carer when you assign that position at creation. They say this did not occur for Carer Karen Omeire (528248) via the api. (payload image attached) Expected Behaviour : They added a new Carer in their third-party platform that is connected to OTH via API. They assigned a position, and the expectation was that when this information was imported to OneTouch, the HR Files would be added to them. Actual Behaviour : The HR Files did not automatically add like they do when you assign the position to the Carer when creating them in OTH directly."
+  },
+  {
+    "id": "OTD-341",
+    "summary": "Expenses files not opening",
+    "problemStatement": "Problem Statement : When you try to open an attachment in Confirm Expenses v2, you get an error message. It seems to be happening to some of the expenses, not all of them This is happening between pages 5 and 8 Doesn't seem to be any consistency in which files are having the issue, have observed the issue with .jpeg and .jpg files and some files with characters such as underscores open successfully while others do not Expected Behaviour : When you click on the attachment, the pop-up should appear where you can save and view it Actual Behaviour : When you click on the expense attachment, you get an error message '********************* ERROR READING FILE Screenshot_20260428_224303_MobiOffice.jpg ********************'"
+  },
+  {
+    "id": "OTD-340",
+    "summary": "Journey address input freezes after first character on inter-travel logging page",
+    "problemStatement": "Statement of IssueOn the Journey page within the carer portal, the address input field used for logging inter-travel (travel that takes place within a visit) becomes unresponsive after a single character is entered. The Google Maps autocomplete integration appears to trigger a freeze on keystroke, preventing the carer from completing their address entry and saving their journey.Affected URL: care2.onetouchhealth.net/cm/caring/journey.php?recurrId=172708242&timesheetId=200200823Steps to ReproduceLog into the carer portal as a carer user.Navigate to an active or completed visit (call).Click the Journey icon to open the inter-travel logging page.In the Address input field, begin typing a location.Observe that after the first character is entered, the input field freezes and no further characters can be typed.Acceptance CriteriaThe carer can type a full address into the Address input field without interruption.Google Maps autocomplete suggestions appear as expected while the carer types.The carer can select a suggested address or complete manual entry.The journey can be saved successfully and submitted for admin confirmation.The issue is reproducible across supported browsers (Chrome, Edge, Safari) and is verified as resolved in all of them."
+  },
+  {
+    "id": "OTD-342",
+    "summary": "Delete timesheet from schedule not working",
+    "problemStatement": "Since the deployment yesterday there has been a bug reported by multiple companies that they are unable to delete a timesheet from the schedule as they previously could. This is not permission related, that cause has already been investigated and ruled out.I believe it’s related to This is occurring from the schedule page: care2.onetouchhealth.net/cm/in/schedule_cancel_update.php?q=413403&month=05/2026When you click on the ‘Delete Timesheet’ nothing happensPlease ensure you can delete a single timesheet on future, today, and past events. *To test past events, you’ll need the delete pin which is 7272.The only time you should not be able to delete a timesheet is when it has already been invoiced, in which case you should see this message."
+  },
+  {
+    "id": "OTB-614",
+    "summary": "Carer Schedules removed when status changed via api",
+    "problemStatement": "Problem Statement : Carer's schedules not becoming unassigned when carer is changed to an archived status via API. Re-updating the status to archived on OT still does not remove the carer from the calls, as seen with example 1. 3 examples Vanessa Boyle - 258583Marked archived on 30/04/2026. Remarked as archived 14./05/26. Calls remaining: Recurring event Sat & Sun from 13/06 onwards 2. Katja Nowack - 236968 Marked as archived on 01/03/25. Calls remaining: Recurring calls on Saturdays from 30/05/26 onwards 3. Maxine Overton - 182747 Marked archived on 12/05/26. Calls remaining: Mon-Thurs & Sat- Sun from 25/05/26 onwards Expected Behaviour : Changing carer to archived status should assign them from the call. Actual Behaviour : In these three examples, the carers were marked as archived after being assigned to the call, yet they remain."
+  },
+  {
+    "id": "OTD-337",
+    "summary": "Schedule difference report discrepancies ",
+    "problemStatement": "Problem Statement : The schedule difference report is not showing the correct number of minutes that calls are going over. Example carer Gemma Cole ID 491447 Call with client Jennifer Ridgewell ID 347719 Date: 15.01.26 Scheduled time: 13:30 - 15:30 The actual duration of the call is 169:52:15 (hrs)SELECT * FROM `timesheet` WHERE `id` = '180949115' LIMIT 50This appears to be the same for other calls that are far beyond their scheduled duration Expected Behaviour : Schedule difference should show the number of minute the call is over the duration scheduled ~10,080 Actual Behaviour : Instead, it is showing 60 minutes under"
+  },
+  {
+    "id": "OTB-613",
+    "summary": "Calls without timesheets showing a clock out time in schedule difference report",
+    "problemStatement": "Problem Statement : In the schedule difference report, it is showing clock-out times for some carers, but no clock-in times. To use one example, on the 19th of April, there are no clock-in times for Kafayat's call with the client Zeninella, but there is the exact same clock-out time of 21.35 for the 3 calls. They were all different times of the day, and there are no timesheets for these calls. There are no deleted timesheets for these calls either Expected Behaviour : If there is a clock-out time, there should also be a clock-in time. Actual Behaviour : There are clock-out times, but no clock-in times, and no timesheets"
+  },
+  {
+    "id": "OTB-611",
+    "summary": "Error opening HR Files",
+    "problemStatement": "Problem Statement : When clicking on the file uploaded to Carer Chukwuemeka Nwoke's (306456) \"NVB1 Form\" HR File/Qualification, the page returns an ERROR READING FILE error. Expected Behaviour : When you click on the file attached to the \"NVB1 Form\" HR File/Qualification, the Windows \"Save as\" pop-up should appear, where you can save the file to your device. Actual Behaviour : When you click on the attached file, named \"Chukwuemeka_Nwoke-Garda_Vetting (1).pdf\", the page turns white and displays the following error: ********************* ERROR READING FILE 161/482/carer/306456/hr-files/Chukwuemeka_Nwoke-Garda_Vetting (1).pdf ********************"
+  },
+  {
+    "id": "OTR-757",
+    "summary": "Unable to print care plan",
+    "problemStatement": "Problem Statement : When you press the orange print button in the webview of a plan, you get the error message below. It appears if you have no option ticked, and also if you have some ticked. Error message: 'object(Mpdf\\MpdfException)#64 (8) { [\"message\":protected]=> string(65) \"Invalid input characters. Did you set $mpdf->in_charset properly?\" [\"string\":\"Exception\":private]=> string(0) \"\" [\"code\":protected]=> int(0) [\"file\":protected]=> string(65) \"/var/www/cm/in/assets/pdfMaker/mpdf/vendor/mpdf/mpdf/src/Mpdf.php\" [\"line\":protected]=> int(25987) [\"trace\":\"Exception\":private]=> array(2) { [0]=> array(5) { [\"file\"]=> string(65) \"/var/www/cm/in/assets/pdfMaker/mpdf/vendor/mpdf/mpdf/src/Mpdf.php\" [\"line\"]=> int(13150) [\"function\"]=> string(11) \"purify_utf8\" [\"class\"]=> string(9) \"Mpdf\\Mpdf\" [\"type\"]=> string(2) \"->\" } [1]=> array(5) { [\"file\"]=> string(47) \"/var/www/cm/in/clientDetailsPrint_update_v2.php\" [\"line\"]=> int(2061) [\"function\"]=> string(9) \"WriteHTML\" [\"class\"]=> string(9) \"Mpdf\\Mpdf\" [\"type\"]=> string(2) \"->\" } } [\"previous\":\"Exception\":private]=> NULL [\"severity\":protected]=> int(1) }' The blue print buttons work fine. A few companies have submitted tickets saying they're getting the same error - Mediline Supported Living and BB Derbyshire Expected Behaviour : When you click Print, the plan would open in a separate window Actual Behaviour : The page loads for a while, and then you get the error message displayed, and the plan doesn't open"
+  },
+  {
+    "id": "OTD-331",
+    "summary": "No data in timesheet table - Power BI",
+    "problemStatement": "Problem Statement : We use the Power BI Gateway which has a copy of the MySQL database however, timesheets has no data Expected Behaviour : Based on what is being said, timesheets should have data Actual Behaviour : Timesheet table has no data"
+  },
+  {
+    "id": "OTB-609",
+    "summary": "Email Governance Link not directing to SSO",
+    "problemStatement": "Problem Statement : Customer is reporting that the links in the emails they receive for Governance Tasks do not prompt them to sign in using their Azure AD/Entra ID SSO. Expected Behaviour : The links from the email should bring them to their Azure AD/Entra ID SSO login page. Actual Behaviour : They are prompted to log in via the regular OneTouch login page."
+  },
+  {
+    "id": "OTD-330",
+    "summary": "Trailing comma in jobtypeGroupName.jobTypeList breaking downstream pages",
+    "problemStatement": "ImpactA trailing comma in the jobTypeList column of the jobtypeGroupName table is causing issues. This malformed data breaks downstream pages that expect a clean comma-separated list of IDs.Expected behaviourThe jobTypeList column should contain a clean comma-separated list without a trailing comma.Actual behaviourThe jobTypeList column contains a trailing comma, which disrupts the functionality of pages that parse this column.Steps to reproduceNavigate to cm/in/compJobType_aus.php(From dashboard click on the ‘Company Settings’ on left hand menu, find jobtype settings page)Make a change to a job type (click on edit / delete , and change the jobtype group)Save the changesInspect the jobtypeGroupName.jobTypeList column in the database for that recordObserve: the value has a trailing comma (e.g. 2142,2151,2152,2288,)EnvironmentN/AWorkaroundsN/AOther informationThe jobTypeList column stores a comma-separated list of job type IDs (e.g. 2142,2151,2152,2288).The primary suspect for the issue is cm/in/compJobType_aus.php, which is used more frequently.There is also a secondary page, cm/in/jobTypeSetup.php, that writes to this column.Functional requirements include fixing the save logic, investigating jobTypeSetup.php, and writing a data cleanup script to remove trailing commas from existing rows.Success CriteriaYou can create a new jobtype without a comma being introduced to the end of a string cm/in/compJobType_aus.phpYou can delete a jobtype without a comma being introduced to the end of a string cm/in/compJobType_aus.phpYou can edit a jobtype without a comma being introduced to the end of a string cm/in/compJobType_aus.phpYou can edit the inclusions of a jobtype group without a comma being introduced at the end of a string cm/in/jobTypeSetup.php"
+  },
+  {
+    "id": "OTD-329",
+    "summary": "archived carers showing up on carer pay report ",
+    "problemStatement": "Problem Statement : When you run Carer Pay as normal with no area filter applied, it runs as normal. However, when you run it with the areas Erris 1, Erris 2, Mayo Area 1, and Area 2 selected, then all the archived and pending carers show in the list. The carers I looked at were archived as far back as 2021. It seems to only be happening in the Regional Health Area F location and in the Mayo areas. Expected Behaviour : The carers who are archived or pending with no timesheets should not show on the report Actual Behaviour : Archived carers are only showing when you filter the report by area. If you have branch access applied, they will still show when you filter the report by area. Approximately 271 carers who are archived or pending are showing on Carer Pay V1 report when areas mentioned are selected prior to running the report"
+  },
+  {
+    "id": "OTB-607",
+    "summary": "CLONE - #62032 File Export missing data HCM",
+    "problemStatement": "Development ScopeWhen adding a product, the range is selected from a dropdown. We need to ensure that the corresponding text is also saved in the hmproduct table under the productRange field, as this field is widely used across reporting. Changing the reporting is not an option, as it is too extensively embedded throughout the system.Dev Scope FinishedProblem : File Export missing data Expected : Data in \"range\" pulls through onto exportActual : Some products do not have the \"range\" when exported"
+  },
+  {
+    "id": "OTB-605",
+    "summary": "67914 - Area filter (branch access) does not apply to hr files due",
+    "problemStatement": "Problem Statement: Filtering Areas using the Branch Filter on the Main Dashboard does not affect the HR File Due section. Expected Behaviour: When the Branch Filter is applied to select a specific Area or multiple Areas, only the HR Files that are Due for that/those Areas will display on the HR File Due section on the Main Dashboard. Actual Behaviour: The Area filter (on branch access) does not affect the HR Files Due section. Both the Branch and Work Group filters do work as expectedThis applies to both the Legacy UI and the New UI."
+  },
+  {
+    "id": "OTB-603",
+    "summary": "MAINLY CARE1 67922 Error when sending SMS",
+    "problemStatement": "Problem Statement : The \"Send SMS to Carer\"/Instacare feature returns an HTTP Error 500 consistently on Care1 and does not load on certain Care2 Locations. Expected Behaviour : After clicking \"OK\" to accept that sending the SMS will apply a charge to the account, no error should appear. The SMS should simply be sent to the Carer, and a green \"Message has been Sent\" banner should appear at the top of the page. Actual Behaviour : Checking the DB (see below) it does appear that the SMS's are being delivered and the feature is functioning correctly however the errors persist as below : Care 1 Admin Enda Spillane (169430) receives a HTTP ERROR 500 page when using the SMS feature to send a text to Carer Lisa Golden (42648) for the 19:00-20:00 call with Client Maurice O'Mahony (321515) on 09/05. After clicking the \"Send Texts/Emails\" button and accepting that sending an SMS will charge the account, the page returns the following error: This page isn’t workingcare2.onetouchhealth.net is currently unable to handle this request. HTTP ERROR 500 Issue also replicated in my Care1 testing location - (1069)Steffie Demo Care2 Clicking the \"Send SMS to Carer\" button causes the browser tab to appear as though it is loading, but it never moves to the next page. This occurs on my demo (2517)Steffie Demo, but not on the main demo location (1)Demo. I could not identify why."
+  },
+  {
+    "id": "OTB-606",
+    "summary": "#62032 File Export missing data",
+    "problemStatement": "Problem : File Export missing data Expected : Data in \"range\" pulls through onto exportActual : Some products do not have the \"range\" when exported"
+  },
+  {
+    "id": "OTR-701",
+    "summary": "#67818 Stopped med not appearing on stopped med report",
+    "problemStatement": "Problem : Stopped medication not appearing on stopped medication report Actual : An admin stopped a medication for the client Athif Khan 1-1, but it is not showing in the Stopped Medication Report, regardless of the date range ran for the report Expected : Any \"stopped\" medication should appear in the stopped medication report. Admin India Graham stopped it at 10:59 on 06/05/2026 (see DB screenshot), but it does not appear on the report"
+  },
+  {
+    "id": "OTR-700",
+    "summary": "#67803 Missing EMAR audit page ",
+    "problemStatement": "Problem : First page of EMAR audit PDF is not displaying company logo, client information etc. Expected : The first page displays the same info as the other pages in this clients EMAR Audit PDF , as it does for any other client and is not half blankActual : The top half of the first page of the EMAR Audit PDF is blank for this client (328156) This information is visible on the next page, but this is blank on the first page of the completed audits.When clicking the EMAR Audit button on the EMAR, the information does display. It only disappears once completed.This only looks to be impacting this Client."
+  },
+  {
+    "id": "OTB-599",
+    "summary": "#67856 - Main Dashboard broken ",
+    "problemStatement": "Problem Statement The Main Dashboard is not fully functional in the customer's company, as well as the demo. on the old UI/UX This is not impacting all companies. So far we have Access , be independent , rainbow care group , active List of Issues Branch filter is broken.Notifications sidebar is not loading any data.Quick Access Carer and Quick Access Client do not work.Hovering over them also does not display the usual pop-up. It's broken and shows its formatting.The VIEW CLOCK-IN STATUS button in the Current Clock-In Status section no longer works,The Hours section \"All Job Types\" drop-down is broken. Recording showing issue as well as expected appearance and function is attached."
+  },
+  {
+    "id": "OTD-326",
+    "summary": "April HFH Export",
+    "problemStatement": "Issue raised by care2 company HFH - companyId 197They are trying to get their payroll report out of the system that uses our background download script. The report originates from this page: care2.onetouchhealth.net/cm/in/carerPayPerClient_ld_travel.phpThe admin tried to download it 35 timesOther issue with may or may not be related … their dashboard is getting an error, it’s not loading properly. Alerts and notifications are not loadingand the dropdown on the hours wont close"
+  },
+  {
+    "id": "OTD-323",
+    "summary": "Auto column visibility hiding functionally required column",
+    "problemStatement": "SummaryAs a user confirming timesheets, I want the \"Extras\" column to be visible by default on the Time Confirm page so that I can see and generate recurring expenses alongside timesheets without needing to manually unhide the column.Background & ContextThe Time Confirm page (confirmTime_signed_v2.php) on care1 has a column visibility feature. The \"Extras\" column shows recurring expenses that need to be generated alongside the timesheet. However, this column is hidden by default. When hidden, the associated expense does not generate — meaning users are confirming timesheets that should have expenses attached without being aware. This can result in incorrect pay and billing. This affects all customers on care1 who use the recurring expenses function.Page: care1.onetouchhealth.net/cm/in/confirmTime_signed_v2.php Scope: care1 onlyFunctional RequirementsThe \"Extras\" column must be visible by default when the Time Confirm page loads.Users should still be able to hide/show the column via the existing column visibility controls.No changes to how recurring expenses are generated — the existing behaviour (expenses only generate when the column is visible) remains as-is.Acceptance CriteriaAC1 — Extras column visible on page loadGiven a user navigates to the Time Confirm pageWhen the page loadsThen the \"Extras\" column is visible without any manual actionAC2 — Expense generates when column is visibleGiven the Extras column is visible by defaultWhen a timesheet with a recurring expense is confirmedThen the expense is generated as expectedAC3 — Manual hide still worksGiven a user manually hides the Extras column via column visibilityWhen they confirm a timesheetThen the existing behaviour applies (expense does not generate)AC4 — Applies to all care1 usersGiven this change is deployedWhen any user on care1 loads the Time Confirm pageThen the Extras column default applies regardless of customer/area"
+  }
+]
