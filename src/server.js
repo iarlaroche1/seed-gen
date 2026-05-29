@@ -47,21 +47,22 @@ app.post('/api/search', async (req, res) => {
       const raw = await getTicket(query.trim().toUpperCase());
       ticket = parseTicket(raw);
       console.log('parsed ticket:', JSON.stringify(ticket, null, 2)); 
-      // Build a richer search string from the ticket rather than just the ID,
-      // which would produce meaningless embeddings.
-      // problemStatement is filtered line-by-line to strip metadata fields, URLs,
-      // and boilerplate labels that pollute the embedding and skew table matches.
-      searchQuery = [
-        ticket.summary,
-        ticket.problemStatement
-          .split('\n')
-          .map(l => l.trim())
-          .filter(l => l.length > 20)
-          .filter(l => !l.startsWith('http'))
-          .filter(l => !l.match(/^(Company|Server|Location|Steps|URLs|Screenshots|Vimeo|N\/A|Governance ID|Screenshot|Cannot|I cannot)/i))
-          .slice(0, 5)
-          .join(' ')
-      ].filter(Boolean).join(' ');
+      // Split on '. ' rather than '\n' because the ADF parser produces long
+      // runs of text with few real line breaks. Sentence splitting gives finer
+      // control and avoids passing metadata labels into the embedding.
+      const METADATA_RE = /https?:\/\/|company|server|location|steps|vimeo|screenshot|governance id|care[1-4]/i;
+      const cleanedSentences = ticket.problemStatement
+        .split('. ')
+        .map(s => s.trim())
+        .filter(s => s.length > 20 && !METADATA_RE.test(s))
+        .slice(0, 3)
+        .join('. ');
+
+      searchQuery = [ticket.summary, cleanedSentences]
+        .filter(Boolean)
+        .join(' ')
+        .trim()
+        .slice(0, 300);
       console.log('search query:', searchQuery);
     }
 
