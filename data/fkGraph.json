@@ -1,0 +1,793 @@
+{
+  "fkMap": {
+    "carer": [
+      {
+        "column": "client_id",
+        "referencesTable": "client",
+        "referencesColumn": "id"
+      }
+    ],
+    "carerPending": [
+      {
+        "column": "client_id",
+        "referencesTable": "client",
+        "referencesColumn": "id"
+      }
+    ],
+    "chartBaselineNumerics": [
+      {
+        "column": "baselineId",
+        "referencesTable": "chartBaselines",
+        "referencesColumn": "id"
+      }
+    ],
+    "chartBaselineOptions": [
+      {
+        "column": "baselineId",
+        "referencesTable": "chartBaselines",
+        "referencesColumn": "id"
+      }
+    ],
+    "chartBaselines": [
+      {
+        "column": "createdBy",
+        "referencesTable": "carer",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "updatedBy",
+        "referencesTable": "carer",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "deletedBy",
+        "referencesTable": "carer",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "questionId",
+        "referencesTable": "chartQuestions",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "chartId",
+        "referencesTable": "chart",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "clientId",
+        "referencesTable": "client",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "companyId",
+        "referencesTable": "company",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "locationId",
+        "referencesTable": "location",
+        "referencesColumn": "id"
+      }
+    ],
+    "cheswold_scanner": [
+      {
+        "column": "carerId",
+        "referencesTable": "carer",
+        "referencesColumn": "id"
+      }
+    ],
+    "clientInfectionsMcGeer": [
+      {
+        "column": "parent_id",
+        "referencesTable": "clientInfectionsMcGeer",
+        "referencesColumn": "id"
+      }
+    ],
+    "clientInfectionsMcGeerResponses": [
+      {
+        "column": "session_id",
+        "referencesTable": "clientInfectionsMcGeerSession",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "question_id",
+        "referencesTable": "clientInfectionsMcGeer",
+        "referencesColumn": "id"
+      }
+    ],
+    "clientInfectionsMcGeerResponsesHistory": [
+      {
+        "column": "selected_response_id",
+        "referencesTable": "clientInfectionsMcGeerResponses",
+        "referencesColumn": "id"
+      }
+    ],
+    "clientInfectionsMcGeerSession": [
+      {
+        "column": "client_infection_id",
+        "referencesTable": "clientInfections",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "category_id",
+        "referencesTable": "clientInfectionsMcGeer",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "symdrome_id",
+        "referencesTable": "clientInfectionsMcGeer",
+        "referencesColumn": "id"
+      }
+    ],
+    "cmChartBaselineNumerics": [
+      {
+        "column": "baselineId",
+        "referencesTable": "cmChartBaselines",
+        "referencesColumn": "id"
+      }
+    ],
+    "cmChartBaselineOptions": [
+      {
+        "column": "baselineId",
+        "referencesTable": "cmChartBaselines",
+        "referencesColumn": "id"
+      }
+    ],
+    "cmChartBaselines": [
+      {
+        "column": "createdBy",
+        "referencesTable": "carer",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "updatedBy",
+        "referencesTable": "carer",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "deletedBy",
+        "referencesTable": "carer",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "questionId",
+        "referencesTable": "cmChartQuestions",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "chartId",
+        "referencesTable": "cmChart",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "clientId",
+        "referencesTable": "client",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "companyId",
+        "referencesTable": "company",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "locationId",
+        "referencesTable": "location",
+        "referencesColumn": "id"
+      }
+    ],
+    "cmClientPayPick": [
+      {
+        "column": "clientId",
+        "referencesTable": "client",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "carerId",
+        "referencesTable": "carer",
+        "referencesColumn": "id"
+      }
+    ],
+    "cmInvoiceDetails": [
+      {
+        "column": "areaId",
+        "referencesTable": "area",
+        "referencesColumn": "id"
+      }
+    ],
+    "cmInvoiceDetailsRecalculate": [
+      {
+        "column": "clientId",
+        "referencesTable": "client",
+        "referencesColumn": "id"
+      }
+    ],
+    "cmMultipleQualifications": [
+      {
+        "column": "deletedBy",
+        "referencesTable": "deleted",
+        "referencesColumn": "id"
+      }
+    ],
+    "cmPayrollJobtypeGroupItems": [
+      {
+        "column": "jobtypeGroupNameId",
+        "referencesTable": "jobtypeGroupName",
+        "referencesColumn": "id"
+      }
+    ],
+    "cmSkinAssessments": [
+      {
+        "column": "clientId",
+        "referencesTable": "client",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "classificationId",
+        "referencesTable": "cmSkinClassifications",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "gradeId",
+        "referencesTable": "cmSkinGrades",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "painIntensityId",
+        "referencesTable": "cmSkinIntensities",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "typeId",
+        "referencesTable": "cmSkinTypes",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "companyId",
+        "referencesTable": "company",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "locationId",
+        "referencesTable": "location",
+        "referencesColumn": "id"
+      }
+    ],
+    "cmSkinClassifications": [
+      {
+        "column": "companyId",
+        "referencesTable": "company",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "locationId",
+        "referencesTable": "location",
+        "referencesColumn": "id"
+      }
+    ],
+    "cmSkinFiles": [
+      {
+        "column": "assessmentId",
+        "referencesTable": "cmSkinAssessments",
+        "referencesColumn": "id"
+      }
+    ],
+    "cmSkinGrades": [
+      {
+        "column": "companyId",
+        "referencesTable": "company",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "locationId",
+        "referencesTable": "location",
+        "referencesColumn": "id"
+      }
+    ],
+    "cmSkinIntensities": [
+      {
+        "column": "companyId",
+        "referencesTable": "company",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "locationId",
+        "referencesTable": "location",
+        "referencesColumn": "id"
+      }
+    ],
+    "cmSkinTypes": [
+      {
+        "column": "companyId",
+        "referencesTable": "company",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "locationId",
+        "referencesTable": "location",
+        "referencesColumn": "id"
+      }
+    ],
+    "compliance_details_history": [
+      {
+        "column": "todoId",
+        "referencesTable": "compliance",
+        "referencesColumn": "id"
+      }
+    ],
+    "compliance_subject_history": [
+      {
+        "column": "todoId",
+        "referencesTable": "compliance",
+        "referencesColumn": "id"
+      }
+    ],
+    "cqcTabs": [
+      {
+        "column": "deletedBy",
+        "referencesTable": "deleted",
+        "referencesColumn": "id"
+      }
+    ],
+    "familyPhotos": [
+      {
+        "column": "companyId",
+        "referencesTable": "company",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "locationId",
+        "referencesTable": "location",
+        "referencesColumn": "id"
+      }
+    ],
+    "inNewMeds": [
+      {
+        "column": "locationId",
+        "referencesTable": "location",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "companyId",
+        "referencesTable": "company",
+        "referencesColumn": "id"
+      }
+    ],
+    "nhAnswersCheckbox": [
+      {
+        "column": "answerId",
+        "referencesTable": "nhAnswers",
+        "referencesColumn": "id"
+      }
+    ],
+    "nhAnswersDate": [
+      {
+        "column": "answerId",
+        "referencesTable": "nhAnswers",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "questionId",
+        "referencesTable": "nhFormQuestions",
+        "referencesColumn": "id"
+      }
+    ],
+    "nhAnswersOptions": [
+      {
+        "column": "answerId",
+        "referencesTable": "nhAnswers",
+        "referencesColumn": "id"
+      }
+    ],
+    "nhAnswersText": [
+      {
+        "column": "answerId",
+        "referencesTable": "nhAnswers",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "questionId",
+        "referencesTable": "nhFormQuestions",
+        "referencesColumn": "id"
+      }
+    ],
+    "nhAnswersTime": [
+      {
+        "column": "answerId",
+        "referencesTable": "nhAnswers",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "questionId",
+        "referencesTable": "nhFormQuestions",
+        "referencesColumn": "id"
+      }
+    ],
+    "nhDiagnosis": [
+      {
+        "column": "created_by",
+        "referencesTable": "carer",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "updated_by",
+        "referencesTable": "carer",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "deleted_by",
+        "referencesTable": "carer",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "clientId",
+        "referencesTable": "client",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "companyId",
+        "referencesTable": "company",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "locationId",
+        "referencesTable": "location",
+        "referencesColumn": "id"
+      }
+    ],
+    "nhFormQuestions": [
+      {
+        "column": "groupId",
+        "referencesTable": "nhFormQuestionsGroups",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "formId",
+        "referencesTable": "nhForms",
+        "referencesColumn": "id"
+      }
+    ],
+    "nhFormQuestionsGroups": [
+      {
+        "column": "formId",
+        "referencesTable": "nhForms",
+        "referencesColumn": "id"
+      }
+    ],
+    "nhFormQuestionsOptions": [
+      {
+        "column": "questionId",
+        "referencesTable": "nhFormQuestions",
+        "referencesColumn": "id"
+      }
+    ],
+    "nhFormScore": [
+      {
+        "column": "formId",
+        "referencesTable": "nhForms",
+        "referencesColumn": "id"
+      }
+    ],
+    "nhMedicalHistory": [
+      {
+        "column": "clientId",
+        "referencesTable": "client",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "companyId",
+        "referencesTable": "company",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "locationId",
+        "referencesTable": "location",
+        "referencesColumn": "id"
+      }
+    ],
+    "nhProgressNotes": [
+      {
+        "column": "areaId",
+        "referencesTable": "area",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "categoryId",
+        "referencesTable": "nhProgressNotesCategory",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "clientId",
+        "referencesTable": "client",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "companyId",
+        "referencesTable": "company",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "locationId",
+        "referencesTable": "location",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "reasonId",
+        "referencesTable": "nhProgressNotesReason",
+        "referencesColumn": "id"
+      }
+    ],
+    "nhProgressNotesCategory": [
+      {
+        "column": "areaId",
+        "referencesTable": "area",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "companyId",
+        "referencesTable": "company",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "locationId",
+        "referencesTable": "location",
+        "referencesColumn": "id"
+      }
+    ],
+    "nhProgressNotesReason": [
+      {
+        "column": "areaId",
+        "referencesTable": "area",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "categoryId",
+        "referencesTable": "nhProgressNotesCategory",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "companyId",
+        "referencesTable": "company",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "locationId",
+        "referencesTable": "location",
+        "referencesColumn": "id"
+      }
+    ],
+    "nhProgressNotesSubtasks": [
+      {
+        "column": "assignTo",
+        "referencesTable": "carer",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "clientId",
+        "referencesTable": "client",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "companyId",
+        "referencesTable": "company",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "locationId",
+        "referencesTable": "location",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "progressNoteId",
+        "referencesTable": "nhProgressNotes",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "progressNoteTaskId",
+        "referencesTable": "nhProgressNotesTasks",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "areaId",
+        "referencesTable": "area",
+        "referencesColumn": "id"
+      }
+    ],
+    "nhProgressNotesSubtasksActions": [
+      {
+        "column": "progressNotesSubtaskId",
+        "referencesTable": "nhProgressNotesSubtasks",
+        "referencesColumn": "id"
+      }
+    ],
+    "nhProgressNotesTaskActions": [
+      {
+        "column": "progressNotesTasksId",
+        "referencesTable": "nhProgressNotesTasks",
+        "referencesColumn": "id"
+      }
+    ],
+    "nhProgressNotesTasks": [
+      {
+        "column": "areaId",
+        "referencesTable": "area",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "categoryId",
+        "referencesTable": "nhProgressNotesCategory",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "companyId",
+        "referencesTable": "company",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "locationId",
+        "referencesTable": "location",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "reasonId",
+        "referencesTable": "nhProgressNotesReason",
+        "referencesColumn": "id"
+      }
+    ],
+    "permissionsRolesName": [
+      {
+        "column": "companyId",
+        "referencesTable": "company",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "locationId",
+        "referencesTable": "location",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "deletedBy",
+        "referencesTable": "deleted",
+        "referencesColumn": "id"
+      }
+    ],
+    "scheduleFlags": [
+      {
+        "column": "companyId",
+        "referencesTable": "company",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "locationId",
+        "referencesTable": "location",
+        "referencesColumn": "id"
+      }
+    ],
+    "sessions": [
+      {
+        "column": "user_id",
+        "referencesTable": "users",
+        "referencesColumn": "id"
+      }
+    ],
+    "timesheetCustomId": [
+      {
+        "column": "timesheetId",
+        "referencesTable": "timesheet",
+        "referencesColumn": "id"
+      }
+    ],
+    "todo_details_history": [
+      {
+        "column": "todoId",
+        "referencesTable": "todo",
+        "referencesColumn": "id"
+      }
+    ],
+    "todo_issue_subtask_items": [
+      {
+        "column": "todoId",
+        "referencesTable": "todo",
+        "referencesColumn": "id"
+      }
+    ],
+    "todo_subject_history": [
+      {
+        "column": "todoId",
+        "referencesTable": "todo",
+        "referencesColumn": "id"
+      }
+    ],
+    "v2AssessmentTakenSnapshot": [
+      {
+        "column": "createdBy",
+        "referencesTable": "carer",
+        "referencesColumn": "id"
+      },
+      {
+        "column": "assessmentTakenId",
+        "referencesTable": "v2AssessmentTaken",
+        "referencesColumn": "id"
+      }
+    ]
+  },
+  "insertionOrder": [
+    "area",
+    "chart",
+    "chartQuestions",
+    "client",
+    "clientInfections",
+    "clientInfectionsMcGeer",
+    "cmChart",
+    "cmChartQuestions",
+    "company",
+    "compliance",
+    "deleted",
+    "jobtypeGroupName",
+    "location",
+    "nhAnswers",
+    "nhForms",
+    "timesheet",
+    "todo",
+    "users",
+    "v2AssessmentTaken",
+    "cmInvoiceDetails",
+    "carer",
+    "carerPending",
+    "cmInvoiceDetailsRecalculate",
+    "clientInfectionsMcGeerSession",
+    "compliance_details_history",
+    "compliance_subject_history",
+    "cmMultipleQualifications",
+    "cqcTabs",
+    "cmPayrollJobtypeGroupItems",
+    "cmSkinClassifications",
+    "cmSkinGrades",
+    "cmSkinIntensities",
+    "cmSkinTypes",
+    "familyPhotos",
+    "inNewMeds",
+    "nhMedicalHistory",
+    "nhProgressNotesCategory",
+    "permissionsRolesName",
+    "scheduleFlags",
+    "nhAnswersCheckbox",
+    "nhAnswersOptions",
+    "nhFormQuestionsGroups",
+    "nhFormScore",
+    "timesheetCustomId",
+    "todo_details_history",
+    "todo_issue_subtask_items",
+    "todo_subject_history",
+    "sessions",
+    "chartBaselines",
+    "cheswold_scanner",
+    "cmChartBaselines",
+    "cmClientPayPick",
+    "nhDiagnosis",
+    "v2AssessmentTakenSnapshot",
+    "clientInfectionsMcGeerResponses",
+    "cmSkinAssessments",
+    "nhProgressNotesReason",
+    "nhFormQuestions",
+    "chartBaselineNumerics",
+    "chartBaselineOptions",
+    "cmChartBaselineNumerics",
+    "cmChartBaselineOptions",
+    "clientInfectionsMcGeerResponsesHistory",
+    "cmSkinFiles",
+    "nhProgressNotes",
+    "nhProgressNotesTasks",
+    "nhAnswersDate",
+    "nhAnswersText",
+    "nhAnswersTime",
+    "nhFormQuestionsOptions",
+    "nhProgressNotesSubtasks",
+    "nhProgressNotesTaskActions",
+    "nhProgressNotesSubtasksActions"
+  ],
+  "cycles": [],
+  "selfReferences": [
+    "clientInfectionsMcGeer"
+  ]
+}
