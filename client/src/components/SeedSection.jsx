@@ -1,28 +1,23 @@
-import { Loader2, CheckCircle2 } from 'lucide-react'
+import { Loader2, FlaskConical } from 'lucide-react'
 
 export default function SeedSection({ seedPhase, seedResult, showSql, onSeed, onToggleSql }) {
   return (
     <div className="mt-6 space-y-3">
       {seedPhase === 'success' ? (
         <div className="flex items-start gap-3 px-4 py-3 rounded-lg
-          bg-emerald-950/25 border border-emerald-500/15 text-sm">
-          <CheckCircle2 size={15} className="text-emerald-400 shrink-0 mt-0.5" />
-          <span className="text-emerald-300 leading-relaxed">
-            database seeded successfully
-            <span className="mx-1.5 text-emerald-600">·</span>
-            <span className="font-mono text-emerald-400">
-              {seedResult.tablesSeeded} tables
-            </span>
-            <span className="mx-1.5 text-emerald-600">·</span>
-            <span className="font-mono text-emerald-400">
-              {seedResult.rowsInserted} rows inserted
-            </span>
+          bg-amber-950/20 border border-amber-500/20 text-sm">
+          <FlaskConical size={15} className="text-amber-400 shrink-0 mt-0.5" />
+          <span className="text-amber-300 leading-relaxed">
+            stub — seed generation not yet implemented
             {seedResult.ticketId && (
               <>
-                <span className="mx-1.5 text-emerald-600">·</span>
-                <span className="font-mono text-emerald-300">{seedResult.ticketId}</span>
+                <span className="mx-1.5 text-amber-700">·</span>
+                <span className="font-mono text-amber-400">{seedResult.ticketId}</span>
               </>
             )}
+            <p className="mt-1 text-amber-600 text-xs">
+              the sql block below shows the structure that will be generated once the seed module is built.
+            </p>
           </span>
         </div>
       ) : (
@@ -42,7 +37,7 @@ export default function SeedSection({ seedPhase, seedResult, showSql, onSeed, on
               seeding database…
             </>
           ) : (
-            'seed local database'
+            'seed local database (stub)'
           )}
         </button>
       )}

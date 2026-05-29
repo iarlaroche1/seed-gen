@@ -16,6 +16,9 @@ app.use(express.json());
 
 const PORT = process.env.PORT || 3001;
 
+// Loaded at startup so every request doesn't hit disk.
+// descriptions is a flat { tableName: string } map from tableDescriptions.json.
+// fkGraph is the precomputed dependency graph written by fkExtractor.js.
 const descriptions = JSON.parse(
   readFileSync(resolve(__dirname, '../data/tableDescriptions.json'), 'utf8')
 );
@@ -23,8 +26,15 @@ const fkGraph = JSON.parse(
   readFileSync(resolve(__dirname, '../data/fkGraph.json'), 'utf8')
 );
 
+// Matches Jira-style keys like OTR-123 or PROJ-4567.
+// Used to decide whether the query should trigger a Jira fetch first.
 const TICKET_RE = /^[A-Z]+-\d+$/i;
 
+// POST /api/search
+// Accepts a free-text query or a Jira ticket ID.
+// For ticket IDs: fetches the ticket, extracts summary + problem statement,
+// then uses that as the vector search query so the frontend doesn't need
+// to know about Jira at all.
 app.post('/api/search', async (req, res) => {
   const { query } = req.body ?? {};
   if (!query?.trim()) return res.status(400).json({ error: 'query is required' });
@@ -36,9 +46,26 @@ app.post('/api/search', async (req, res) => {
     if (TICKET_RE.test(query.trim())) {
       const raw = await getTicket(query.trim().toUpperCase());
       ticket = parseTicket(raw);
-      searchQuery = [ticket.summary, ticket.problemStatement].filter(Boolean).join(' ');
+      console.log('parsed ticket:', JSON.stringify(ticket, null, 2)); 
+      // Build a richer search string from the ticket rather than just the ID,
+      // which would produce meaningless embeddings.
+      // problemStatement is filtered line-by-line to strip metadata fields, URLs,
+      // and boilerplate labels that pollute the embedding and skew table matches.
+      searchQuery = [
+        ticket.summary,
+        ticket.problemStatement
+          .split('\n')
+          .map(l => l.trim())
+          .filter(l => l.length > 20)
+          .filter(l => !l.startsWith('http'))
+          .filter(l => !l.match(/^(Company|Server|Location|Steps|URLs|Screenshots|Vimeo|N\/A|Governance ID|Screenshot|Cannot|I cannot)/i))
+          .slice(0, 5)
+          .join(' ')
+      ].filter(Boolean).join(' ');
+      console.log('search query:', searchQuery);
     }
 
+    // vectors.json is gitignored and must be built locally before searching.
     if (!vectorStoreExists()) {
       return res.status(503).json({
         error: 'Vector store not built. Run: node scripts/buildVectors.js first.',
@@ -46,6 +73,8 @@ app.post('/api/search', async (req, res) => {
     }
 
     const results = await searchVectorStore(searchQuery, 10);
+    // Merge vector results with plain-English descriptions from tableDescriptions.json.
+    // The vector store only returns name + sql + score; descriptions are richer for display.
     const tables = results.map(r => ({
       name: r.name,
       score: r.score,
@@ -59,21 +88,28 @@ app.post('/api/search', async (req, res) => {
   }
 });
 
+// GET /api/fkgraph
+// Serves the precomputed FK dependency graph for the frontend's SVG visualisation.
 app.get('/api/fkgraph', (_req, res) => res.json(fkGraph));
 
+// POST /api/seed
+// NOT IMPLEMENTED — stubbed to unblock frontend development.
+// Replace this with real seed generation (Claude API + topological insert ordering)
+// once the src/seed/ module is built.
 app.post('/api/seed', async (req, res) => {
   const { ticketId, tables = [] } = req.body ?? {};
   await new Promise(r => setTimeout(r, 1800));
-  const rowsInserted = tables.length * (Math.floor(Math.random() * 6) + 3);
   res.json({
-    success: true,
-    tablesSeeded: tables.length,
-    rowsInserted,
+    stubbed: true,
     ticketId: ticketId ?? null,
+    tables,
     sql: buildStubSql(ticketId, tables),
   });
 });
 
+// Produces a skeleton SQL file showing the shape of real output.
+// FOREIGN_KEY_CHECKS=0/1 will be needed in the real implementation because
+// topological sort can't resolve self-referencing tables (e.g. clientInfectionsMcGeer).
 function buildStubSql(ticketId, tables) {
   return [
     `-- Generated seed SQL${ticketId ? ` for ${ticketId}` : ''}`,
