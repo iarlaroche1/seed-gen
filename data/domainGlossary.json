@@ -21,7 +21,7 @@
   "staff": ["carer"],
   "worker": ["carer"],
   "visit": ["recurr", "timesheet"],
-  "care plan": ["careplanTakenPRSB", "cmFormsPlansTaken", "nhaCarePlanTaken"],
+  "care plan": ["cmPlans", "cmFormsPlansTaken", "careplanTakenPRSB", "nhaCarePlanTaken"],
   "medication round": ["medicationAssign", "medicationResults", "medicationAssignTimes"],
   "invoice": ["cmInvoiceDetails", "cmInvoiceDetailsItems"],
   "timesheet": ["timesheet", "timesheetDelete", "timesheetEdit"],
@@ -29,5 +29,17 @@
   "hr file": ["cmQualifications", "fileCabinet"],
   "assessment": ["nhAssessmentTaken", "v2AssessmentTaken"],
   "task": ["cmdailyTasksAssign", "cmdailyTasksResults"],
-  "expense": ["cmExpenses", "cmExpensesType"]
+  "expense": ["cmExpenses", "cmExpensesType"],
+  "roster": ["recurr", "adminRecurr", "staticEvents", "view_events"],
+  "availability": ["cmCarerAvailability", "available", "carerAvailabilityExceptions"],
+  "scheduling": ["recurr", "adminRecurr", "cmSchedulePermissions", "rcShiftSchedule"],
+  "timesheet flag": ["timesheet", "timesheetEdit", "timesheetDelete"],
+  "residential roster": ["recurr", "adminRecurr", "rcShiftSchedule", "rcBed", "rcCareHome"],
+  "shift": ["recurr", "adminRecurr", "rcShiftSchedule"],
+  "unconfirmed": ["timesheet", "timesheetEdit"],
+  "payroll": ["timesheet", "cmCarerPay", "cmCarerPayScale", "timesheetBatch"],
+  "nutrition": ["nhmustAssessment", "nhDiagnosis"],
+  "MUST": ["nhmustAssessment", "nhAssessmentTaken"],
+  "screening": ["screening", "nhmustAssessment"],
+  "care home": ["rcCareHome", "rcBed", "rcWing", "area"]
 }
