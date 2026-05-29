@@ -62,7 +62,7 @@ export default function App() {
       const res = await fetch('/api/seed', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ticketId: ticket?.id, tables: tables.map(t => t.name) }),
+        body: JSON.stringify({ ticket, tables }),
       })
       const data = await res.json()
       setSeedResult(data)

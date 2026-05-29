@@ -8,7 +8,7 @@ export default function SeedSection({ seedPhase, seedResult, showSql, onSeed, on
           bg-amber-950/20 border border-amber-500/20 text-sm">
           <FlaskConical size={15} className="text-amber-400 shrink-0 mt-0.5" />
           <span className="text-amber-300 leading-relaxed">
-            stub — seed generation not yet implemented
+            placeholder values — AI-driven value generation not yet enabled
             {seedResult.ticketId && (
               <>
                 <span className="mx-1.5 text-amber-700">·</span>
@@ -16,7 +16,7 @@ export default function SeedSection({ seedPhase, seedResult, showSql, onSeed, on
               </>
             )}
             <p className="mt-1 text-amber-600 text-xs">
-              the sql block below shows the structure that will be generated once the seed module is built.
+              column names and insert order are real. values are typed placeholders only.
             </p>
           </span>
         </div>
@@ -37,7 +37,7 @@ export default function SeedSection({ seedPhase, seedResult, showSql, onSeed, on
               seeding database…
             </>
           ) : (
-            'seed local database (stub)'
+            'generate seed sql'
           )}
         </button>
       )}

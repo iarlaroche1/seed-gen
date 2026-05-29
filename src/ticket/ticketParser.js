@@ -41,7 +41,7 @@ function extractField(text, label) {
  * @param {string} text
  * @returns {string}
  */
-function cleanDescription(text) {
+export function cleanDescription(text) {
   // Truncate at the first metadata label — everything after is structured fields,
   // not human prose, and pollutes the vector embedding.
   const CUTOFF_RE = /Company DB Number|Server \(|Location ID|Steps to Replicate|URLs:|Screenshots|Governance ID/i;
@@ -63,6 +63,19 @@ function cleanDescription(text) {
 function extractProblemStatement(text) {
   const match = text.match(/Problem Statement\s*:\s*([\s\S]*?)(?=Expected Behaviour|$)/i);
   return cleanDescription(match ? match[1] : text);
+}
+
+/**
+ * Takes raw Jira ADF comment objects and returns cleaned plain text strings.
+ * Applies the same extractText + cleanDescription pipeline used for ticket
+ * descriptions so comment noise doesn't pollute vector search queries.
+ * @param {Object[]} rawComments - Array of raw comment objects from the Jira API
+ * @returns {string[]} Cleaned plain text strings, one per comment
+ */
+export function parseComments(rawComments) {
+  return rawComments
+    .map(c => cleanDescription(extractText(c.body)))
+    .filter(text => text.length > 0);
 }
 
 /**

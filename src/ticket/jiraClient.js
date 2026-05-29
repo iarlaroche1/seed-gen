@@ -42,3 +42,30 @@ export async function getTicket(ticketId) {
 
   return await response.json();
 }
+
+/**
+ * Fetches comments for a Jira ticket and returns them as plain text strings.
+ * Comments are in ADF format — each body is extracted and cleaned the same way
+ * as ticket descriptions to strip metadata noise before embedding.
+ * @param {string} ticketId - The Jira ticket ID e.g. "OTB-601"
+ * @returns {Promise<Array<{text: string, created: string}>>} Comment bodies as plain text, newest first
+ * @throws {Error} If the API request fails or returns a non-OK status
+ */
+export async function getTicketComments(ticketId) {
+  const response = await fetch(
+    `${baseUrl}/rest/api/3/issue/${ticketId}/comment?orderBy=-created`,
+    {
+      headers: {
+        'Authorization': `Basic ${btoa(`${email}:${token}`)}`,
+        'Accept': 'application/json',
+      },
+    }
+  );
+
+  if (!response.ok) {
+    throw new Error(`Jira comments API error: ${response.status} ${response.statusText}`);
+  }
+
+  const data = await response.json();
+  return data.comments ?? [];
+}
